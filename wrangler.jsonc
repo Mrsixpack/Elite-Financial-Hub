@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "elite-finance-hub",
+  "compatibility_date": "2024-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "pages_build_output_dir": "./dist",
+  
+  // D1 Database Configuration (disabled for initial setup)
+  // "d1_databases": [
+  //   {
+  //     "binding": "DB",
+  //     "database_name": "elite-finance-production",
+  //     "database_id": "" // Will be populated after database creation
+  //   }
+  // ],
+  
+  // KV Namespace for sessions and caching (disabled for now)
+  // "kv_namespaces": [
+  //   {
+  //     "binding": "KV", 
+  //     "id": "", // Will be populated after KV creation
+  //     "preview_id": "" // For local development
+  //   }
+  // ],
+  
+  // Environment variables (use wrangler secret for sensitive data)
+  "vars": {
+    "ENVIRONMENT": "production"
+  }
+}
