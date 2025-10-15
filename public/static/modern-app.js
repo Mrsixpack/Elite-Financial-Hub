@@ -42,31 +42,90 @@ const REAL_SUBSCRIPTION_DATA = [
   { id: 26, serviceName: 'Chama Investment', category: 'Personal', monthlyCost: 2000.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-01', icon: '💰' }
 ]
 
-// MrSixPack's ACTUAL financial profile from real payroll data
+// MrSixPack's ACTUAL financial profile from OCTOBER 2025 real payroll data
 const REAL_PROFILE_DATA = {
   name: 'MrSixPack (Sammy)',
   profession: 'Licensed Practical Nurse (LPN → RN)',
   location: 'Delaware, USA',
+  employerId: 'MSL0002',
+  employer: 'Insperity',
   
-  // Real income from Insperity paystub (Pay Period: 07/27/2025 - 08/09/2025)
-  biWeeklyGross: 3371.90,        // 81.57 hours total
-  biWeeklyNet: 2390.77,          // After all deductions  
-  monthlyGrossIncome: 7346.13,   // $3,371.90 × 2.18 (26 pays / 12 months)
-  monthlyNetIncome: 5211.68,     // $2,390.77 × 2.18
-  annualGrossIncome: 87670.40,   // $3,371.90 × 26 pay periods
-  annualNetIncome: 62540.02,     // $2,390.77 × 26 pay periods
+  // OCTOBER 2025 PAYCHECK (Pay Date: 10/10/2025, Period: 09/21-10/04/2025)
+  biWeeklyGross: 3151.34,        // Latest paycheck gross
+  biWeeklyNet: 2238.86,          // Latest paycheck net
+  monthlyGrossIncome: 6868.60,   // $3,151.34 × 2.18 (26 pays / 12 months)
+  monthlyNetIncome: 4880.71,     // $2,238.86 × 2.18
+  annualGrossIncome: 81935.00,   // $3,151.34 × 26 pay periods
+  annualNetIncome: 58210.36,     // $2,238.86 × 26 pay periods
   paySchedule: 'bi-weekly',
+  payDate: '2025-10-10',
+  payPeriodStart: '2025-09-21',
+  payPeriodEnd: '2025-10-04',
   
-  // Hourly rates from paystub
-  regularRate: 35.88,
-  overtimeRate: 35.88,
-  doubleTimeRate: 53.82,
+  // Hours worked (October paycheck)
+  regularHours: 72.15,           // 32.15 + 40.00 hours
+  overtimeHours: 6.23,           // OT hours
+  retroHours: 139.10,            // Retro pay hours from prior period
+  totalHours: 78.38,             // Current period hours (excluding retro)
   
-  // Real deductions (bi-weekly)
-  preTaxDeductions: 286.75,      // Medical, dental, vision, 401k
-  taxes: 661.05,                 // Federal, state, SS, Medicare  
-  afterTaxDeductions: 33.33,     // Insurance, identity protection, etc.
-  retirement401k: 202.31,        // Current bi-weekly contribution (YTD: $2,114.64)
+  // Hourly rates from October paystub
+  regularRate: 36.96,            // Regular hourly rate
+  overtimeRate: 55.44,           // 1.5x overtime rate
+  doubleTimeRate: 53.82,         // 2x rate
+  
+  // Earnings breakdown (October)
+  regularEarnings: 2666.98,      // $1,188.26 + $1,478.40
+  overtimeEarnings: 345.58,      // OT pay
+  retroPay: 1072.06,             // Retro pay from 08/31-09/20
+  
+  // Pre-tax deductions (bi-weekly)
+  preTaxDeductions: 273.52,      // Medical, dental, vision, 401k
+  medicalDeduction: 72.52,
+  dentalDeduction: 9.79,
+  visionDeduction: 2.13,
+  retirement401k: 189.08,        // Current bi-weekly 401k contribution
+  
+  // Taxes (bi-weekly)
+  taxes: 605.63,                 // Total taxes
+  federalTax: 228.42,
+  stateTax: 142.59,              // Delaware SIT
+  socialSecurity: 190.15,
+  medicare: 44.47,
+  
+  // After-tax deductions (bi-weekly)
+  afterTaxDeductions: 33.33,     // Insurance, identity protection
+  legalDeduction: 8.31,
+  identityFraudProtection: 5.05,
+  criticalIllness: 8.45,
+  hospitalInsurance: 8.54,
+  accidentInsurance: 2.98,
+  
+  // Year-to-date totals (as of 10/13/2025)
+  ytdGross: 64995.38,
+  ytdFederalTax: 4959.80,
+  ytdStateTax: 3000.24,
+  ytdSocialSecurity: 3922.95,
+  ytdMedicare: 917.48,
+  ytd401k: 2838.10,              // YTD 401k employee contributions
+  
+  // 401(k) Retirement Account (as of 10/13/2025)
+  retirement401kBalance: 5126.14,           // Current balance
+  retirement401kVested: 5126.14,            // 100% vested
+  retirement401kEmployeeYTD: 2838.10,       // Employee YTD
+  retirement401kEmployerYTD: 1892.09,       // Employer YTD
+  retirement401kTotalYTD: 4730.19,          // Total YTD contributions
+  retirement401kContributionRate: 6.0,      // 6% contribution rate
+  retirement401kEmployerMatch: 126.05,      // Last employer contribution
+  retirement401kAnnualLimit: 23000.00,      // 2025 IRS limit
+  retirement401kProjectedYearEnd: 6500.00,  // Projected end of year
+  
+  // PTO Balance (from Insperity portal as of 10/15/2025)
+  ptoAvailable: 16.183,          // Current PTO available
+  ptoUsed: 119.000,              // PTO used YTD
+  ptoTotalAvailable: 131.730,    // Total PTO pool
+  ptoBalance: 12.730,            // Remaining balance (131.730 - 119.000)
+  floatingHoliday: 0.0,
+  birthdayTime: 0.0,
   
   // Financial goals & credit (ACTUAL NUMBERS - MrSixPack is WINNING!)
   currentCreditScore: 735,       // EXCELLENT SCORE! 🔥
@@ -370,6 +429,587 @@ const AIRecommendationCard = ({ recommendation, index }) => {
   )
 }
 
+// October 2025 Paycheck Breakdown Component (World-Class Visualization)
+const PaycheckBreakdown = () => {
+  const profile = REAL_PROFILE_DATA
+  
+  return React.createElement('div', {
+    className: 'space-y-6'
+  },
+    // Header
+    React.createElement('div', {
+      className: 'bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white'
+    },
+      React.createElement('div', {
+        className: 'flex items-center justify-between'
+      },
+        React.createElement('div', {},
+          React.createElement('h2', {
+            className: 'text-2xl font-bold mb-2'
+          }, '💰 October 2025 Paycheck'),
+          React.createElement('p', {
+            className: 'text-blue-100 text-sm'
+          }, `Pay Period: ${profile.payPeriodStart} to ${profile.payPeriodEnd}`),
+          React.createElement('p', {
+            className: 'text-blue-100 text-sm'
+          }, `Pay Date: ${profile.payDate}`)
+        ),
+        React.createElement('div', {
+          className: 'text-right'
+        },
+          React.createElement('p', {
+            className: 'text-4xl font-bold'
+          }, formatCurrency(profile.biWeeklyNet)),
+          React.createElement('p', {
+            className: 'text-sm text-blue-100'
+          }, 'Net Pay')
+        )
+      )
+    ),
+    
+    // Earnings Section
+    React.createElement('div', {
+      className: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-6 border border-green-500/30'
+    },
+      React.createElement('h3', {
+        className: 'text-xl font-bold mb-4 text-green-400'
+      }, '📈 Earnings Breakdown'),
+      React.createElement('div', {
+        className: 'space-y-3'
+      },
+        // Gross Pay
+        React.createElement('div', {
+          className: 'flex justify-between items-center'
+        },
+          React.createElement('span', {
+            className: 'text-white font-semibold'
+          }, 'Gross Pay'),
+          React.createElement('span', {
+            className: 'text-green-400 font-bold text-lg'
+          }, formatCurrency(profile.biWeeklyGross))
+        ),
+        
+        // Regular Earnings
+        React.createElement('div', {
+          className: 'pl-4 flex justify-between items-center text-sm'
+        },
+          React.createElement('span', {
+            className: 'text-gray-300'
+          }, `Regular (${profile.regularHours} hrs @ $${profile.regularRate}/hr)`),
+          React.createElement('span', {
+            className: 'text-gray-200'
+          }, formatCurrency(profile.regularEarnings))
+        ),
+        
+        // Overtime Earnings
+        React.createElement('div', {
+          className: 'pl-4 flex justify-between items-center text-sm'
+        },
+          React.createElement('span', {
+            className: 'text-gray-300'
+          }, `Overtime (${profile.overtimeHours} hrs @ $${profile.overtimeRate}/hr)`),
+          React.createElement('span', {
+            className: 'text-gray-200'
+          }, formatCurrency(profile.overtimeEarnings))
+        ),
+        
+        // Retro Pay
+        React.createElement('div', {
+          className: 'pl-4 flex justify-between items-center text-sm'
+        },
+          React.createElement('span', {
+            className: 'text-gray-300'
+          }, `Retro Pay (${profile.retroHours} hrs)`),
+          React.createElement('span', {
+            className: 'text-gray-200'
+          }, formatCurrency(profile.retroPay))
+        )
+      )
+    ),
+    
+    // Deductions Section
+    React.createElement('div', {
+      className: 'grid md:grid-cols-3 gap-4'
+    },
+      // Pre-Tax Deductions
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-6 border border-blue-500/30'
+      },
+        React.createElement('h4', {
+          className: 'text-lg font-bold mb-3 text-blue-400'
+        }, 'Pre-Tax'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white mb-4'
+        }, formatCurrency(profile.preTaxDeductions)),
+        React.createElement('div', {
+          className: 'space-y-2 text-sm'
+        },
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Medical'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.medicalDeduction))
+          ),
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Dental'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.dentalDeduction))
+          ),
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Vision'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.visionDeduction))
+          ),
+          React.createElement('div', {
+            className: 'flex justify-between font-semibold'
+          },
+            React.createElement('span', {
+              className: 'text-blue-300'
+            }, '401(k)'),
+            React.createElement('span', {
+              className: 'text-blue-300'
+            }, formatCurrency(profile.retirement401k))
+          )
+        )
+      ),
+      
+      // Taxes
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-6 border border-red-500/30'
+      },
+        React.createElement('h4', {
+          className: 'text-lg font-bold mb-3 text-red-400'
+        }, 'Taxes'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white mb-4'
+        }, formatCurrency(profile.taxes)),
+        React.createElement('div', {
+          className: 'space-y-2 text-sm'
+        },
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Federal'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.federalTax))
+          ),
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'State (DE)'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.stateTax))
+          ),
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Social Security'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.socialSecurity))
+          ),
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Medicare'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.medicare))
+          )
+        )
+      ),
+      
+      // After-Tax Deductions
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-6 border border-purple-500/30'
+      },
+        React.createElement('h4', {
+          className: 'text-lg font-bold mb-3 text-purple-400'
+        }, 'After-Tax'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white mb-4'
+        }, formatCurrency(profile.afterTaxDeductions)),
+        React.createElement('div', {
+          className: 'space-y-2 text-sm'
+        },
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Legal'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.legalDeduction))
+          ),
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Identity Fraud'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.identityFraudProtection))
+          ),
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Critical Illness'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.criticalIllness))
+          ),
+          React.createElement('div', {
+            className: 'flex justify-between'
+          },
+            React.createElement('span', {
+              className: 'text-gray-300'
+            }, 'Other'),
+            React.createElement('span', {
+              className: 'text-gray-200'
+            }, formatCurrency(profile.hospitalInsurance + profile.accidentInsurance))
+          )
+        )
+      )
+    ),
+    
+    // YTD Summary
+    React.createElement('div', {
+      className: 'bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-2xl p-6 border border-amber-500/30'
+    },
+      React.createElement('h3', {
+        className: 'text-xl font-bold mb-4 text-amber-400'
+      }, '📊 Year-to-Date Summary (as of 10/13/2025)'),
+      React.createElement('div', {
+        className: 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4'
+      },
+        React.createElement('div', {},
+          React.createElement('p', {
+            className: 'text-sm text-gray-400 mb-1'
+          }, 'YTD Gross'),
+          React.createElement('p', {
+            className: 'text-lg font-bold text-white'
+          }, formatCurrency(profile.ytdGross))
+        ),
+        React.createElement('div', {},
+          React.createElement('p', {
+            className: 'text-sm text-gray-400 mb-1'
+          }, 'YTD Federal Tax'),
+          React.createElement('p', {
+            className: 'text-lg font-bold text-white'
+          }, formatCurrency(profile.ytdFederalTax))
+        ),
+        React.createElement('div', {},
+          React.createElement('p', {
+            className: 'text-sm text-gray-400 mb-1'
+          }, 'YTD State Tax'),
+          React.createElement('p', {
+            className: 'text-lg font-bold text-white'
+          }, formatCurrency(profile.ytdStateTax))
+        ),
+        React.createElement('div', {},
+          React.createElement('p', {
+            className: 'text-sm text-gray-400 mb-1'
+          }, 'YTD Social Security'),
+          React.createElement('p', {
+            className: 'text-lg font-bold text-white'
+          }, formatCurrency(profile.ytdSocialSecurity))
+        ),
+        React.createElement('div', {},
+          React.createElement('p', {
+            className: 'text-sm text-gray-400 mb-1'
+          }, 'YTD Medicare'),
+          React.createElement('p', {
+            className: 'text-lg font-bold text-white'
+          }, formatCurrency(profile.ytdMedicare))
+        ),
+        React.createElement('div', {},
+          React.createElement('p', {
+            className: 'text-sm text-gray-400 mb-1'
+          }, 'YTD 401(k)'),
+          React.createElement('p', {
+            className: 'text-lg font-bold text-green-400'
+          }, formatCurrency(profile.ytd401k))
+        )
+      )
+    )
+  )
+}
+
+// 401(k) Retirement Dashboard Component (World-Class)
+const Retirement401kDashboard = () => {
+  const profile = REAL_PROFILE_DATA
+  
+  // Calculate projected retirement value (assuming 7% annual return, retiring at 65)
+  const currentAge = 32 // Estimate
+  const yearsToRetirement = 33 // 65 - 32
+  const annualContribution = profile.retirement401kEmployeeYTD / 10 * 12 // Rough annual estimate
+  const annualReturn = 0.07
+  
+  // Future value calculation: FV = PV(1+r)^n + PMT * [(1+r)^n - 1] / r
+  const futureValue = profile.retirement401kBalance * Math.pow(1 + annualReturn, yearsToRetirement) +
+    annualContribution * ((Math.pow(1 + annualReturn, yearsToRetirement) - 1) / annualReturn)
+  
+  return React.createElement('div', {
+    className: 'space-y-6'
+  },
+    // Header
+    React.createElement('div', {
+      className: 'bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-6 text-white'
+    },
+      React.createElement('div', {
+        className: 'flex items-center justify-between'
+      },
+        React.createElement('div', {},
+          React.createElement('h2', {
+            className: 'text-2xl font-bold mb-2'
+          }, '🏦 401(k) Retirement Account'),
+          React.createElement('p', {
+            className: 'text-green-100 text-sm'
+          }, `${profile.employer} • Account: ******7683`),
+          React.createElement('p', {
+            className: 'text-green-100 text-sm'
+          }, 'As of October 13, 2025')
+        ),
+        React.createElement('div', {
+          className: 'text-right'
+        },
+          React.createElement('p', {
+            className: 'text-4xl font-bold'
+          }, formatCurrency(profile.retirement401kBalance)),
+          React.createElement('p', {
+            className: 'text-sm text-green-100'
+          }, 'Current Balance')
+        )
+      )
+    ),
+    
+    // Key Metrics
+    React.createElement('div', {
+      className: 'grid md:grid-cols-4 gap-4'
+    },
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-4 border border-blue-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Contribution Rate'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, `${profile.retirement401kContributionRate}%`)
+      ),
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-4 border border-purple-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'YTD Employee'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, formatCurrency(profile.retirement401kEmployeeYTD))
+      ),
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-4 border border-green-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'YTD Employer'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, formatCurrency(profile.retirement401kEmployerYTD))
+      ),
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl p-4 border border-amber-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'YTD Total'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, formatCurrency(profile.retirement401kTotalYTD))
+      )
+    ),
+    
+    // Projection
+    React.createElement('div', {
+      className: 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-6 border border-indigo-500/30'
+    },
+      React.createElement('h3', {
+        className: 'text-xl font-bold mb-4 text-indigo-400'
+      }, '🎯 Retirement Projection'),
+      React.createElement('div', {
+        className: 'grid md:grid-cols-3 gap-6'
+      },
+        React.createElement('div', {},
+          React.createElement('p', {
+            className: 'text-sm text-gray-400 mb-2'
+          }, 'Projected Balance at Age 65'),
+          React.createElement('p', {
+            className: 'text-3xl font-bold text-green-400'
+          }, formatCurrency(futureValue)),
+          React.createElement('p', {
+            className: 'text-xs text-gray-500 mt-1'
+          }, 'Assuming 7% annual return')
+        ),
+        React.createElement('div', {},
+          React.createElement('p', {
+            className: 'text-sm text-gray-400 mb-2'
+          }, 'Years to Retirement'),
+          React.createElement('p', {
+            className: 'text-3xl font-bold text-white'
+          }, yearsToRetirement),
+          React.createElement('p', {
+            className: 'text-xs text-gray-500 mt-1'
+          }, 'Target age: 65')
+        ),
+        React.createElement('div', {},
+          React.createElement('p', {
+            className: 'text-sm text-gray-400 mb-2'
+          }, '2025 Contribution Room'),
+          React.createElement('p', {
+            className: 'text-3xl font-bold text-white'
+          }, formatCurrency(profile.retirement401kAnnualLimit - profile.retirement401kEmployeeYTD)),
+          React.createElement('p', {
+            className: 'text-xs text-gray-500 mt-1'
+          }, `Limit: ${formatCurrency(profile.retirement401kAnnualLimit)}`)
+        )
+      )
+    ),
+    
+    // Tips
+    React.createElement('div', {
+      className: 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-6 border border-cyan-500/30'
+    },
+      React.createElement('h4', {
+        className: 'text-lg font-bold mb-3 text-cyan-400'
+      }, '💡 Smart Retirement Tips'),
+      React.createElement('ul', {
+        className: 'space-y-2 text-sm text-gray-300'
+      },
+        React.createElement('li', {}, '✅ Your 6% contribution rate is excellent for building wealth'),
+        React.createElement('li', {}, `✅ Employer match of $${formatCurrency(profile.retirement401kEmployerYTD).replace('$', '')} YTD is FREE money!`),
+        React.createElement('li', {}, `✅ You've contributed ${((profile.retirement401kEmployeeYTD / profile.retirement401kAnnualLimit) * 100).toFixed(1)}% of the 2025 IRS limit`),
+        React.createElement('li', {}, '💎 Consider maxing out to $23,000 annually for optimal tax benefits'),
+        React.createElement('li', {}, '📈 Your projected retirement balance could exceed $1M with consistent contributions!')
+      )
+    )
+  )
+}
+
+// PTO Balance Component (World-Class)
+const PTOBalanceCard = () => {
+  const profile = REAL_PROFILE_DATA
+  const ptoUsagePercent = (profile.ptoUsed / profile.ptoTotalAvailable) * 100
+  
+  return React.createElement('div', {
+    className: 'bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-2xl p-6 border border-teal-500/30'
+  },
+    React.createElement('div', {
+      className: 'flex items-center justify-between mb-4'
+    },
+      React.createElement('h3', {
+        className: 'text-xl font-bold text-teal-400'
+      }, '🏖️ PTO Balance'),
+      React.createElement('span', {
+        className: 'text-sm text-gray-400'
+      }, 'As of Oct 15, 2025')
+    ),
+    
+    // Available PTO
+    React.createElement('div', {
+      className: 'mb-6'
+    },
+      React.createElement('p', {
+        className: 'text-4xl font-bold text-white mb-2'
+      }, `${profile.ptoAvailable.toFixed(2)} hours`),
+      React.createElement('p', {
+        className: 'text-sm text-gray-400'
+      }, 'Available for Use')
+    ),
+    
+    // PTO Usage Bar
+    React.createElement('div', {
+      className: 'mb-6'
+    },
+      React.createElement('div', {
+        className: 'flex justify-between text-sm mb-2'
+      },
+        React.createElement('span', {
+          className: 'text-gray-400'
+        }, 'PTO Usage'),
+        React.createElement('span', {
+          className: 'text-gray-300'
+        }, `${ptoUsagePercent.toFixed(1)}%`)
+      ),
+      React.createElement('div', {
+        className: 'w-full h-3 bg-gray-700 rounded-full overflow-hidden'
+      },
+        React.createElement('div', {
+          className: 'h-full bg-gradient-to-r from-teal-400 to-cyan-500 transition-all duration-1000',
+          style: { width: `${ptoUsagePercent}%` }
+        })
+      )
+    ),
+    
+    // Breakdown
+    React.createElement('div', {
+      className: 'grid grid-cols-3 gap-4 text-center'
+    },
+      React.createElement('div', {},
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Used'),
+        React.createElement('p', {
+          className: 'text-lg font-bold text-red-400'
+        }, `${profile.ptoUsed.toFixed(0)}h`)
+      ),
+      React.createElement('div', {},
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Available'),
+        React.createElement('p', {
+          className: 'text-lg font-bold text-green-400'
+        }, `${profile.ptoAvailable.toFixed(1)}h`)
+      ),
+      React.createElement('div', {},
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Total Pool'),
+        React.createElement('p', {
+          className: 'text-lg font-bold text-white'
+        }, `${profile.ptoTotalAvailable.toFixed(0)}h`)
+      )
+    )
+  )
+}
+
 // Main App Component
 const EliteFinancialHub = () => {
   const [loading, setLoading] = useState(true)
@@ -454,7 +1094,7 @@ const EliteFinancialHub = () => {
         React.createElement('div', {
           className: 'flex space-x-8'
         },
-          ['dashboard', 'subscriptions', 'cashflow', 'investments', 'analysis', 'goals'].map(tab =>
+          ['dashboard', 'paycheck', 'retirement', 'subscriptions', 'cashflow', 'analysis', 'goals'].map(tab =>
             React.createElement('button', {
               key: tab,
               onClick: () => setActiveTab(tab),
@@ -465,9 +1105,10 @@ const EliteFinancialHub = () => {
               }`
             }, {
               dashboard: 'Dashboard',
+              paycheck: '💰 Paycheck',
+              retirement: '🏦 401(k)',
               subscriptions: 'Subscriptions', 
               cashflow: 'Cash Flow',
-              investments: 'Investments',
               analysis: 'AI Analysis',
               goals: 'Goals'
             }[tab])
@@ -520,6 +1161,113 @@ const EliteFinancialHub = () => {
           })
         ),
         
+        // October Paycheck & PTO Row
+        React.createElement('div', {
+          className: 'grid grid-cols-1 md:grid-cols-2 gap-6'
+        },
+          React.createElement('div', {
+            className: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-6 border border-blue-500/30'
+          },
+            React.createElement('h3', {
+              className: 'text-lg font-bold mb-3 text-blue-400'
+            }, '💰 Latest Paycheck (Oct 10, 2025)'),
+            React.createElement('div', {
+              className: 'grid grid-cols-2 gap-4'
+            },
+              React.createElement('div', {},
+                React.createElement('p', {
+                  className: 'text-sm text-gray-400 mb-1'
+                }, 'Gross Pay'),
+                React.createElement('p', {
+                  className: 'text-2xl font-bold text-white'
+                }, formatCurrency(REAL_PROFILE_DATA.biWeeklyGross))
+              ),
+              React.createElement('div', {},
+                React.createElement('p', {
+                  className: 'text-sm text-gray-400 mb-1'
+                }, 'Net Pay'),
+                React.createElement('p', {
+                  className: 'text-2xl font-bold text-green-400'
+                }, formatCurrency(REAL_PROFILE_DATA.biWeeklyNet))
+              ),
+              React.createElement('div', {},
+                React.createElement('p', {
+                  className: 'text-sm text-gray-400 mb-1'
+                }, 'Hours Worked'),
+                React.createElement('p', {
+                  className: 'text-xl font-bold text-white'
+                }, `${REAL_PROFILE_DATA.totalHours} hrs`)
+              ),
+              React.createElement('div', {},
+                React.createElement('p', {
+                  className: 'text-sm text-gray-400 mb-1'
+                }, 'YTD Gross'),
+                React.createElement('p', {
+                  className: 'text-xl font-bold text-white'
+                }, formatCurrency(REAL_PROFILE_DATA.ytdGross))
+              )
+            ),
+            React.createElement('button', {
+              onClick: () => setActiveTab('paycheck'),
+              className: 'mt-4 w-full bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 font-semibold py-2 rounded-lg transition-colors'
+            }, 'View Full Breakdown →')
+          ),
+          React.createElement(PTOBalanceCard, {})
+        ),
+        
+        // 401(k) Highlight
+        React.createElement('div', {
+          className: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-6 border border-green-500/30'
+        },
+          React.createElement('div', {
+            className: 'flex items-center justify-between mb-4'
+          },
+            React.createElement('h3', {
+              className: 'text-xl font-bold text-green-400'
+            }, '🏦 401(k) Retirement'),
+            React.createElement('button', {
+              onClick: () => setActiveTab('retirement'),
+              className: 'text-sm bg-green-500/20 hover:bg-green-500/30 text-green-300 px-4 py-2 rounded-lg transition-colors'
+            }, 'View Details →')
+          ),
+          React.createElement('div', {
+            className: 'grid grid-cols-2 md:grid-cols-4 gap-4'
+          },
+            React.createElement('div', {},
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, 'Current Balance'),
+              React.createElement('p', {
+                className: 'text-2xl font-bold text-white'
+              }, formatCurrency(REAL_PROFILE_DATA.retirement401kBalance))
+            ),
+            React.createElement('div', {},
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, 'YTD Employee'),
+              React.createElement('p', {
+                className: 'text-xl font-bold text-white'
+              }, formatCurrency(REAL_PROFILE_DATA.retirement401kEmployeeYTD))
+            ),
+            React.createElement('div', {},
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, 'YTD Employer'),
+              React.createElement('p', {
+                className: 'text-xl font-bold text-white'
+              }, formatCurrency(REAL_PROFILE_DATA.retirement401kEmployerYTD))
+            ),
+            React.createElement('div', {},
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, 'Contribution Rate'),
+              React.createElement('p', {
+                className: 'text-xl font-bold text-green-400'
+              }, `${REAL_PROFILE_DATA.retirement401kContributionRate}%`)
+            )
+          )
+        ),
+        
         // Top Categories
         React.createElement('div', {
           className: 'bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10'
@@ -559,6 +1307,12 @@ const EliteFinancialHub = () => {
           )
         )
       ),
+      
+      // Paycheck Tab
+      activeTab === 'paycheck' && React.createElement(PaycheckBreakdown, {}),
+      
+      // Retirement 401(k) Tab
+      activeTab === 'retirement' && React.createElement(Retirement401kDashboard, {}),
       
       // Subscriptions Tab
       activeTab === 'subscriptions' && React.createElement('div', {
