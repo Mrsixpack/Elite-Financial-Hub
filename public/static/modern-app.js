@@ -1,17 +1,28 @@
 // Elite Financial Hub - ULTRA MODERN Version with Real MrSixPack Data
 // Premium UI/UX with animations, glassmorphism, and modern design
 
-// MrSixPack's ACTUAL subscription data (26 real subscriptions)
+// MrSixPack's ACTUAL subscription data (From Excel Tracker + Previous Data)
 const REAL_SUBSCRIPTION_DATA = [
-  // Insurance & Essential Services
-  { id: 1, serviceName: 'GEICO Auto Insurance', category: 'Insurance', monthlyCost: 427.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-15', icon: '🚗' },
-  { id: 2, serviceName: 'Health Insurance Premium', category: 'Insurance', monthlyCost: 375.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-18', icon: '🏥' },
-  { id: 3, serviceName: 'Mobile Phone Plan', category: 'Utilities', monthlyCost: 200.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-22', icon: '📱' },
-  { id: 4, serviceName: 'Water Bill', category: 'Utilities', monthlyCost: 120.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-10-04', icon: '💧' },
+  // From Excel Tracker - Actively Tracked
+  { id: 1, serviceName: 'Netflix', category: 'Entertainment', monthlyCost: 15.49, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-01', icon: '📺', priority: 'Medium', action: 'Keep', notes: 'Standard plan, good value' },
+  { id: 2, serviceName: 'Spotify Premium', category: 'Entertainment', monthlyCost: 10.99, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-05', icon: '🎵', priority: 'High', action: 'Keep', notes: 'Daily use, essential' },
+  { id: 3, serviceName: 'Adobe Creative Suite', category: 'Professional', monthlyCost: 22.99, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-10', icon: '🎨', priority: 'High', action: 'Keep', notes: 'Work/side projects' },
+  { id: 4, serviceName: 'Amazon Prime', category: 'Shopping', monthlyCost: 14.98, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-15', icon: '📦', priority: 'Medium', action: 'Review', notes: 'Annual might be cheaper' },
+  { id: 5, serviceName: 'Disney+', category: 'Entertainment', monthlyCost: 7.99, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-08', icon: '🎬', priority: 'Low', action: 'Cancel?', notes: 'Limited use lately - SAVE $95.88/year' },
+  { id: 6, serviceName: 'Hulu', category: 'Entertainment', monthlyCost: 7.99, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-12', icon: '📺', priority: 'Low', action: 'Cancel?', notes: 'Overlaps with Netflix - SAVE $95.88/year' },
+  { id: 7, serviceName: 'Apple iCloud', category: 'Storage', monthlyCost: 2.99, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-03', icon: '☁️', priority: 'Medium', action: 'Keep', notes: 'Photo backup essential' },
+  { id: 8, serviceName: 'Gym Membership', category: 'Health', monthlyCost: 24.99, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-20', icon: '💪', priority: 'High', action: 'Keep', notes: 'Health investment' },
+  { id: 9, serviceName: 'YouTube Premium', category: 'Entertainment', monthlyCost: 11.99, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-18', icon: '▶️', priority: 'Medium', action: 'Review', notes: 'Ad-free convenience - Review usage' },
+  { id: 10, serviceName: 'Microsoft 365', category: 'Productivity', monthlyCost: 6.99, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-11-25', icon: '📄', priority: 'High', action: 'Keep', notes: 'Work documents' },
+  
+  // Insurance & Essential Services (From Previous Data)
+  { id: 11, serviceName: 'GEICO Auto Insurance', category: 'Insurance', monthlyCost: 427.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-15', icon: '🚗', priority: 'High', action: 'Keep', notes: 'Essential coverage' },
+  { id: 12, serviceName: 'Health Insurance Premium', category: 'Insurance', monthlyCost: 375.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-18', icon: '🏥', priority: 'High', action: 'Keep', notes: 'Essential coverage' },
+  { id: 13, serviceName: 'Mobile Phone Plan', category: 'Utilities', monthlyCost: 200.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-22', icon: '📱', priority: 'High', action: 'Keep', notes: 'Essential service' },
+  { id: 14, serviceName: 'Water Bill', category: 'Utilities', monthlyCost: 120.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-10-04', icon: '💧', priority: 'High', action: 'Keep', notes: 'Essential utility' },
   
   // Food & Living Expenses
-  { id: 5, serviceName: 'Food/Groceries', category: 'Utilities', monthlyCost: 300.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-10-05', icon: '🛒' },
-  { id: 6, serviceName: 'Amazon Prime', category: 'Shopping', monthlyCost: 40.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-03', icon: '📦' },
+  { id: 15, serviceName: 'Food/Groceries', category: 'Utilities', monthlyCost: 300.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-10-05', icon: '🛒', priority: 'High', action: 'Keep', notes: 'Essential expense' },
   
   // Technology & AI Tools (Content Creation)
   { id: 7, serviceName: 'ChatGPT Plus', category: 'Technology', monthlyCost: 20.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-29', icon: '🤖' },
@@ -39,8 +50,268 @@ const REAL_SUBSCRIPTION_DATA = [
   { id: 25, serviceName: 'Gym', category: 'Utilities', monthlyCost: 37.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-10-08', icon: '🏋️' },
   
   // Personal Finance (Chama - Investment/Savings)
-  { id: 26, serviceName: 'Chama Investment', category: 'Personal', monthlyCost: 2000.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-01', icon: '💰' }
+  { id: 26, serviceName: 'Chama Investment', category: 'Personal', monthlyCost: 2000.00, billingCycle: 'monthly', isActive: true, nextRenewal: '2025-09-01', icon: '💰', priority: 'High', action: 'Keep', notes: 'Wealth building' }
 ]
+
+// Bank Accounts Data (From Excel Tracker)
+const BANK_ACCOUNTS_DATA = [
+  { 
+    id: 1, 
+    name: 'Primary Checking', 
+    institution: 'Wells Fargo', 
+    type: 'Checking', 
+    currentBalance: 180.80, 
+    targetBalance: 1000, 
+    monthlyGoal: 200, 
+    status: 'Critical',
+    notes: 'Emergency fund - PRIORITY',
+    icon: '🏦',
+    color: 'red'
+  },
+  { 
+    id: 2, 
+    name: 'Secondary Checking', 
+    institution: 'Bank of America', 
+    type: 'Checking', 
+    currentBalance: 324.32, 
+    targetBalance: 1000, 
+    monthlyGoal: 150, 
+    status: 'Low',
+    notes: 'Bill payments account',
+    icon: '🏦',
+    color: 'orange'
+  },
+  { 
+    id: 3, 
+    name: 'Emergency Fund', 
+    institution: 'High-Yield Savings', 
+    type: 'Savings', 
+    currentBalance: 0, 
+    targetBalance: 5000, 
+    monthlyGoal: 300, 
+    status: 'Not Started',
+    notes: 'Target: 3 months expenses',
+    icon: '🚨',
+    color: 'red'
+  },
+  { 
+    id: 4, 
+    name: '401k Retirement', 
+    institution: 'Employer Plan', 
+    type: 'Retirement', 
+    currentBalance: 5126.14, 
+    targetBalance: 25000, 
+    monthlyGoal: 427.18, 
+    status: 'Building',
+    notes: 'Auto-contribution active',
+    icon: '🏦',
+    color: 'green'
+  },
+  { 
+    id: 5, 
+    name: 'Investment Account', 
+    institution: 'Brokerage', 
+    type: 'Investment', 
+    currentBalance: 0, 
+    targetBalance: 2000, 
+    monthlyGoal: 100, 
+    status: 'Not Started',
+    notes: 'Long-term growth',
+    icon: '📈',
+    color: 'purple'
+  },
+  { 
+    id: 6, 
+    name: 'Vacation Fund', 
+    institution: 'Savings', 
+    type: 'Savings', 
+    currentBalance: 0, 
+    targetBalance: 1500, 
+    monthlyGoal: 50, 
+    status: 'Not Started',
+    notes: 'Future travel goals',
+    icon: '✈️',
+    color: 'blue'
+  }
+]
+
+// Action Items & Savings Opportunities (From Excel Tracker)
+const ACTION_ITEMS_DATA = [
+  { 
+    id: 1, 
+    action: 'Cancel Disney+ subscription', 
+    priority: 'High', 
+    monthlySavings: 7.99, 
+    annualSavings: 95.88,
+    timeNeeded: '5 minutes', 
+    deadline: '1 week', 
+    notes: 'Save $95.88/year, barely used',
+    completed: false,
+    category: 'subscriptions'
+  },
+  { 
+    id: 2, 
+    action: 'Cancel Hulu subscription', 
+    priority: 'High', 
+    monthlySavings: 7.99, 
+    annualSavings: 95.88,
+    timeNeeded: '5 minutes', 
+    deadline: '1 week', 
+    notes: 'Save $95.88/year, overlaps Netflix',
+    completed: false,
+    category: 'subscriptions'
+  },
+  { 
+    id: 3, 
+    action: 'Build Wells Fargo emergency fund', 
+    priority: 'High', 
+    monthlySavings: 0,
+    annualSavings: 0,
+    timeNeeded: '1 hour setup', 
+    deadline: '30 days', 
+    notes: 'Add $200/month to reach $1000',
+    completed: false,
+    category: 'savings'
+  },
+  { 
+    id: 4, 
+    action: 'Set up automatic transfers', 
+    priority: 'High', 
+    monthlySavings: 0,
+    annualSavings: 0,
+    timeNeeded: '30 minutes', 
+    deadline: '2 weeks', 
+    notes: 'Automate savings to avoid spending',
+    completed: false,
+    category: 'automation'
+  },
+  { 
+    id: 5, 
+    action: 'Review credit card utilization', 
+    priority: 'High', 
+    monthlySavings: 0,
+    annualSavings: 0,
+    timeNeeded: '1 hour', 
+    deadline: '1 week', 
+    notes: 'Critical for credit score improvement',
+    completed: false,
+    category: 'credit'
+  },
+  { 
+    id: 6, 
+    action: 'Switch Amazon Prime to annual', 
+    priority: 'Medium', 
+    monthlySavings: 2.50,
+    annualSavings: 30,
+    timeNeeded: '10 minutes', 
+    deadline: '30 days', 
+    notes: 'Annual plan saves ~$30/year',
+    completed: false,
+    category: 'subscriptions'
+  },
+  { 
+    id: 7, 
+    action: 'Open high-yield savings account', 
+    priority: 'Medium', 
+    monthlySavings: 0,
+    annualSavings: 0,
+    timeNeeded: '2 hours', 
+    deadline: '2 weeks', 
+    notes: 'Earn 4-5% vs 0.01% current',
+    completed: false,
+    category: 'savings'
+  },
+  { 
+    id: 8, 
+    action: 'Request credit limit increases', 
+    priority: 'Medium', 
+    monthlySavings: 0,
+    annualSavings: 0,
+    timeNeeded: '30 minutes', 
+    deadline: '1 week', 
+    notes: 'Improves credit utilization ratio',
+    completed: false,
+    category: 'credit'
+  },
+  { 
+    id: 9, 
+    action: 'Review YouTube Premium usage', 
+    priority: 'Medium', 
+    monthlySavings: 11.99,
+    annualSavings: 143.88,
+    timeNeeded: '5 minutes', 
+    deadline: '2 weeks', 
+    notes: 'Cancel if not using regularly',
+    completed: false,
+    category: 'subscriptions'
+  },
+  { 
+    id: 10, 
+    action: 'Optimize 401k contribution %', 
+    priority: 'Low', 
+    monthlySavings: 0,
+    annualSavings: 0,
+    timeNeeded: '1 hour', 
+    deadline: '60 days', 
+    notes: 'Maximize employer match first',
+    completed: false,
+    category: 'retirement'
+  }
+]
+
+// Credit Optimization Plan (From Excel Tracker)
+const CREDIT_OPTIMIZATION_DATA = {
+  currentScore: 640,
+  targetScore: 700,
+  improvementNeeded: 60,
+  factors: [
+    {
+      name: 'Payment History',
+      weight: '35%',
+      currentStatus: 'Good',
+      targetStatus: 'Excellent',
+      impact: 'High',
+      progress: 0.85,
+      action: 'Continue perfect payment streak'
+    },
+    {
+      name: 'Credit Utilization',
+      weight: '30%',
+      currentStatus: 'High (>30%)',
+      targetStatus: 'Low (<10%)',
+      impact: 'Very High',
+      progress: 0.20,
+      action: 'Pay down balances, increase limits'
+    },
+    {
+      name: 'Length of History',
+      weight: '15%',
+      currentStatus: 'Short (2-3 years)',
+      targetStatus: 'Long (5+ years)',
+      impact: 'Medium',
+      progress: 0.60,
+      action: 'Keep old accounts open, be patient'
+    },
+    {
+      name: 'Credit Mix',
+      weight: '10%',
+      currentStatus: 'Limited',
+      targetStatus: 'Diverse',
+      impact: 'Low',
+      progress: 0.40,
+      action: 'Add different types of credit'
+    },
+    {
+      name: 'New Credit',
+      weight: '10%',
+      currentStatus: 'Recent inquiries',
+      targetStatus: 'Stable',
+      impact: 'Medium',
+      progress: 0.70,
+      action: 'Avoid new credit applications'
+    }
+  ]
+}]
 
 // MrSixPack's ACTUAL financial profile from OCTOBER 2025 real payroll data
 const REAL_PROFILE_DATA = {
@@ -127,10 +398,24 @@ const REAL_PROFILE_DATA = {
   floatingHoliday: 0.0,
   birthdayTime: 0.0,
   
-  // Financial goals & credit (ACTUAL NUMBERS - MrSixPack is WINNING!)
-  currentCreditScore: 735,       // EXCELLENT SCORE! 🔥
-  targetCreditScore: 800,        // Elite status goal
+  // Financial goals & credit (From Excel Tracker + Paystub)
+  currentCreditScore: 640,       // From Excel tracker - IMPROVING! 🔥
+  targetCreditScore: 700,        // Realistic near-term goal
+  ultimateCreditScore: 800,      // Ultimate elite status goal
   creditGoalTimeline: 'Q4 2025',
+  
+  // Bank Accounts (From Excel Tracker)
+  wellsFargoBalance: 180.80,     // Primary checking - CRITICAL status
+  boaBalance: 324.32,            // Secondary checking - LOW status
+  totalLiquid: 505.12,           // Total liquid assets
+  wellsFargoTarget: 1000,
+  boaTarget: 1000,
+  emergencyFundBalance: 0,
+  emergencyFundTarget: 5000,
+  
+  // Net Worth (From Excel Tracker)
+  currentNetWorth: 5631.26,      // Estimated net worth
+  targetNetWorth: 15000,         // Goal net worth
   
   // Business goals
   fitnessBusinessTarget: 5000,   // "Fit-In-60" monthly revenue goal
@@ -923,6 +1208,591 @@ const Retirement401kDashboard = () => {
   )
 }
 
+// Bank Accounts Dashboard Component (World-Class)
+const BankAccountsDashboard = () => {
+  const totalLiquid = BANK_ACCOUNTS_DATA.filter(acc => acc.type === 'Checking' || acc.type === 'Savings').reduce((sum, acc) => sum + acc.currentBalance, 0)
+  const totalRetirement = BANK_ACCOUNTS_DATA.filter(acc => acc.type === 'Retirement').reduce((sum, acc) => sum + acc.currentBalance, 0)
+  const totalInvestments = BANK_ACCOUNTS_DATA.filter(acc => acc.type === 'Investment').reduce((sum, acc) => sum + acc.currentBalance, 0)
+  const totalNetWorth = BANK_ACCOUNTS_DATA.reduce((sum, acc) => sum + acc.currentBalance, 0)
+  const targetNetWorth = BANK_ACCOUNTS_DATA.reduce((sum, acc) => sum + acc.targetBalance, 0)
+  
+  const getStatusColor = (status) => {
+    const colors = {
+      'Critical': 'from-red-500 to-rose-600',
+      'Low': 'from-orange-500 to-amber-600',
+      'Building': 'from-green-500 to-emerald-600',
+      'Not Started': 'from-gray-500 to-slate-600',
+      'On Track': 'from-blue-500 to-cyan-600'
+    }
+    return colors[status] || 'from-gray-500 to-slate-600'
+  }
+  
+  return React.createElement('div', {
+    className: 'space-y-6'
+  },
+    // Header
+    React.createElement('div', {
+      className: 'bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white'
+    },
+      React.createElement('div', {
+        className: 'flex items-center justify-between'
+      },
+        React.createElement('div', {},
+          React.createElement('h2', {
+            className: 'text-2xl font-bold mb-2'
+          }, '🏦 Bank Accounts Overview'),
+          React.createElement('p', {
+            className: 'text-blue-100 text-sm'
+          }, 'Track all your accounts in one place')
+        ),
+        React.createElement('div', {
+          className: 'text-right'
+        },
+          React.createElement('p', {
+            className: 'text-4xl font-bold'
+          }, formatCurrency(totalNetWorth)),
+          React.createElement('p', {
+            className: 'text-sm text-blue-100'
+          }, 'Total Net Worth')
+        )
+      )
+    ),
+    
+    // Summary Cards
+    React.createElement('div', {
+      className: 'grid md:grid-cols-4 gap-4'
+    },
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-4 border border-green-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Liquid Assets'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, formatCurrency(totalLiquid)),
+        React.createElement('p', {
+          className: 'text-xs text-gray-500 mt-1'
+        }, 'Checking + Savings')
+      ),
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-4 border border-blue-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Retirement'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, formatCurrency(totalRetirement)),
+        React.createElement('p', {
+          className: 'text-xs text-gray-500 mt-1'
+        }, '401(k) Balance')
+      ),
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-4 border border-purple-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Investments'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, formatCurrency(totalInvestments)),
+        React.createElement('p', {
+          className: 'text-xs text-gray-500 mt-1'
+        }, 'Brokerage Accounts')
+      ),
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-amber-500/20 to-yellow-500/20 rounded-xl p-4 border border-amber-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Target Net Worth'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, formatCurrency(targetNetWorth)),
+        React.createElement('p', {
+          className: 'text-xs text-gray-500 mt-1'
+        }, `${((totalNetWorth / targetNetWorth) * 100).toFixed(1)}% Complete`)
+      )
+    ),
+    
+    // Individual Accounts
+    React.createElement('div', {
+      className: 'grid md:grid-cols-2 gap-6'
+    },
+      BANK_ACCOUNTS_DATA.map(account =>
+        React.createElement('div', {
+          key: account.id,
+          className: `bg-gradient-to-br ${getStatusColor(account.status)}/20 rounded-2xl p-6 border ${getStatusColor(account.status).replace('from-', 'border-').split(' ')[0]}/30`
+        },
+          React.createElement('div', {
+            className: 'flex items-center justify-between mb-4'
+          },
+            React.createElement('div', {
+              className: 'flex items-center space-x-3'
+            },
+              React.createElement('span', {
+                className: 'text-3xl'
+              }, account.icon),
+              React.createElement('div', {},
+                React.createElement('h3', {
+                  className: 'font-bold text-white text-lg'
+                }, account.name),
+                React.createElement('p', {
+                  className: 'text-sm text-gray-400'
+                }, `${account.institution} • ${account.type}`)
+              )
+            ),
+            React.createElement('span', {
+              className: 'px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white'
+            }, account.status)
+          ),
+          
+          React.createElement('div', {
+            className: 'space-y-3'
+          },
+            React.createElement('div', {
+              className: 'flex justify-between items-center'
+            },
+              React.createElement('span', {
+                className: 'text-gray-400'
+              }, 'Current Balance'),
+              React.createElement('span', {
+                className: 'text-2xl font-bold text-white'
+              }, formatCurrency(account.currentBalance))
+            ),
+            React.createElement('div', {
+              className: 'flex justify-between items-center'
+            },
+              React.createElement('span', {
+                className: 'text-gray-400'
+              }, 'Target Balance'),
+              React.createElement('span', {
+                className: 'text-lg font-semibold text-gray-300'
+              }, formatCurrency(account.targetBalance))
+            ),
+            
+            // Progress Bar
+            React.createElement('div', {
+              className: 'mt-2'
+            },
+              React.createElement('div', {
+                className: 'flex justify-between text-sm mb-1'
+              },
+                React.createElement('span', {
+                  className: 'text-gray-400'
+                }, 'Progress'),
+                React.createElement('span', {
+                  className: 'text-gray-300'
+                }, `${((account.currentBalance / account.targetBalance) * 100).toFixed(1)}%`)
+              ),
+              React.createElement('div', {
+                className: 'w-full h-2 bg-gray-700 rounded-full overflow-hidden'
+              },
+                React.createElement('div', {
+                  className: 'h-full bg-gradient-to-r from-green-400 to-emerald-500 transition-all duration-1000',
+                  style: { width: `${Math.min((account.currentBalance / account.targetBalance) * 100, 100)}%` }
+                })
+              )
+            ),
+            
+            React.createElement('div', {
+              className: 'pt-3 border-t border-white/10'
+            },
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, 'Monthly Goal: ' + formatCurrency(account.monthlyGoal)),
+              React.createElement('p', {
+                className: 'text-xs text-gray-500'
+              }, account.notes)
+            )
+          )
+        )
+      )
+    )
+  )
+}
+
+// Action Items Dashboard Component (World-Class)
+const ActionItemsDashboard = () => {
+  const [completedItems, setCompletedItems] = useState([])
+  
+  const toggleItem = (id) => {
+    if (completedItems.includes(id)) {
+      setCompletedItems(completedItems.filter(itemId => itemId !== id))
+    } else {
+      setCompletedItems([...completedItems, id])
+    }
+  }
+  
+  const totalMonthlySavings = ACTION_ITEMS_DATA.reduce((sum, item) => sum + (item.monthlySavings || 0), 0)
+  const totalAnnualSavings = ACTION_ITEMS_DATA.reduce((sum, item) => sum + (item.annualSavings || 0), 0)
+  
+  const highPriorityItems = ACTION_ITEMS_DATA.filter(item => item.priority === 'High')
+  const mediumPriorityItems = ACTION_ITEMS_DATA.filter(item => item.priority === 'Medium')
+  const lowPriorityItems = ACTION_ITEMS_DATA.filter(item => item.priority === 'Low')
+  
+  const getPriorityColor = (priority) => {
+    const colors = {
+      'High': 'from-red-500 to-orange-600',
+      'Medium': 'from-yellow-500 to-amber-600',
+      'Low': 'from-green-500 to-emerald-600'
+    }
+    return colors[priority] || 'from-gray-500 to-slate-600'
+  }
+  
+  const getCategoryIcon = (category) => {
+    const icons = {
+      'subscriptions': '💳',
+      'savings': '💰',
+      'automation': '⚙️',
+      'credit': '📊',
+      'retirement': '🏦'
+    }
+    return icons[category] || '📋'
+  }
+  
+  return React.createElement('div', {
+    className: 'space-y-6'
+  },
+    // Header
+    React.createElement('div', {
+      className: 'bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6 text-white'
+    },
+      React.createElement('div', {
+        className: 'flex items-center justify-between'
+      },
+        React.createElement('div', {},
+          React.createElement('h2', {
+            className: 'text-2xl font-bold mb-2'
+          }, '✅ Action Items & Savings Opportunities'),
+          React.createElement('p', {
+            className: 'text-purple-100 text-sm'
+          }, 'Quick wins to improve your finances')
+        ),
+        React.createElement('div', {
+          className: 'text-right'
+        },
+          React.createElement('p', {
+            className: 'text-3xl font-bold'
+          }, formatCurrency(totalAnnualSavings)),
+          React.createElement('p', {
+            className: 'text-sm text-purple-100'
+          }, 'Potential Annual Savings')
+        )
+      )
+    ),
+    
+    // Summary Stats
+    React.createElement('div', {
+      className: 'grid grid-cols-2 md:grid-cols-4 gap-4'
+    },
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl p-4 border border-red-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'High Priority'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, highPriorityItems.length)
+      ),
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-yellow-500/20 to-amber-500/20 rounded-xl p-4 border border-yellow-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Medium Priority'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, mediumPriorityItems.length)
+      ),
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-4 border border-green-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Low Priority'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, lowPriorityItems.length)
+      ),
+      React.createElement('div', {
+        className: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-4 border border-blue-500/30'
+      },
+        React.createElement('p', {
+          className: 'text-sm text-gray-400 mb-1'
+        }, 'Completed'),
+        React.createElement('p', {
+          className: 'text-2xl font-bold text-white'
+        }, `${completedItems.length}/${ACTION_ITEMS_DATA.length}`)
+      )
+    ),
+    
+    // Action Items List
+    React.createElement('div', {
+      className: 'space-y-4'
+    },
+      ACTION_ITEMS_DATA.map(item =>
+        React.createElement('div', {
+          key: item.id,
+          className: `bg-gradient-to-br ${getPriorityColor(item.priority)}/20 rounded-2xl p-6 border ${getPriorityColor(item.priority).replace('from-', 'border-').split(' ')[0]}/30 transition-all duration-300 ${completedItems.includes(item.id) ? 'opacity-50' : ''}`
+        },
+          React.createElement('div', {
+            className: 'flex items-start justify-between'
+          },
+            React.createElement('div', {
+              className: 'flex items-start space-x-4 flex-1'
+            },
+              React.createElement('button', {
+                onClick: () => toggleItem(item.id),
+                className: `w-6 h-6 rounded border-2 flex items-center justify-center transition-colors ${completedItems.includes(item.id) ? 'bg-green-500 border-green-500' : 'border-gray-400 hover:border-green-400'}`
+              },
+                completedItems.includes(item.id) && React.createElement('i', {
+                  className: 'fas fa-check text-white text-xs'
+                })
+              ),
+              React.createElement('div', {
+                className: 'flex-1'
+              },
+                React.createElement('div', {
+                  className: 'flex items-center space-x-3 mb-2'
+                },
+                  React.createElement('span', {
+                    className: 'text-2xl'
+                  }, getCategoryIcon(item.category)),
+                  React.createElement('h3', {
+                    className: `font-bold text-white text-lg ${completedItems.includes(item.id) ? 'line-through' : ''}`
+                  }, item.action)
+                ),
+                React.createElement('div', {
+                  className: 'grid grid-cols-2 md:grid-cols-4 gap-3 text-sm mb-3'
+                },
+                  React.createElement('div', {},
+                    React.createElement('span', {
+                      className: 'text-gray-400'
+                    }, 'Priority: '),
+                    React.createElement('span', {
+                      className: 'text-white font-semibold'
+                    }, item.priority)
+                  ),
+                  React.createElement('div', {},
+                    React.createElement('span', {
+                      className: 'text-gray-400'
+                    }, 'Time: '),
+                    React.createElement('span', {
+                      className: 'text-white font-semibold'
+                    }, item.timeNeeded)
+                  ),
+                  React.createElement('div', {},
+                    React.createElement('span', {
+                      className: 'text-gray-400'
+                    }, 'Deadline: '),
+                    React.createElement('span', {
+                      className: 'text-white font-semibold'
+                    }, item.deadline)
+                  ),
+                  item.monthlySavings > 0 && React.createElement('div', {},
+                    React.createElement('span', {
+                      className: 'text-gray-400'
+                    }, 'Saves: '),
+                    React.createElement('span', {
+                      className: 'text-green-400 font-bold'
+                    }, formatCurrency(item.monthlySavings) + '/mo')
+                  )
+                ),
+                React.createElement('p', {
+                  className: 'text-sm text-gray-300'
+                }, item.notes)
+              )
+            ),
+            item.annualSavings > 0 && React.createElement('div', {
+              className: 'text-right'
+            },
+              React.createElement('p', {
+                className: 'text-2xl font-bold text-green-400'
+              }, formatCurrency(item.annualSavings)),
+              React.createElement('p', {
+                className: 'text-xs text-gray-400'
+              }, 'Annual Savings')
+            )
+          )
+        )
+      )
+    )
+  )
+}
+
+// Credit Optimization Dashboard Component (World-Class)
+const CreditOptimizationDashboard = () => {
+  const data = CREDIT_OPTIMIZATION_DATA
+  const avgProgress = data.factors.reduce((sum, f) => sum + f.progress, 0) / data.factors.length
+  
+  return React.createElement('div', {
+    className: 'space-y-6'
+  },
+    // Header
+    React.createElement('div', {
+      className: 'bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-6 text-white'
+    },
+      React.createElement('div', {
+        className: 'flex items-center justify-between'
+      },
+        React.createElement('div', {},
+          React.createElement('h2', {
+            className: 'text-2xl font-bold mb-2'
+          }, '📊 Credit Score Optimization Plan'),
+          React.createElement('p', {
+            className: 'text-indigo-100 text-sm'
+          }, 'Your roadmap to excellent credit')
+        ),
+        React.createElement('div', {
+          className: 'text-right'
+        },
+          React.createElement('p', {
+            className: 'text-sm text-indigo-100 mb-1'
+          }, `Need: +${data.improvementNeeded} points`),
+          React.createElement('div', {
+            className: 'flex items-center space-x-4'
+          },
+            React.createElement('div', {
+              className: 'text-center'
+            },
+              React.createElement('p', {
+                className: 'text-3xl font-bold'
+              }, data.currentScore),
+              React.createElement('p', {
+                className: 'text-xs text-indigo-100'
+              }, 'Current')
+            ),
+            React.createElement('i', {
+              className: 'fas fa-arrow-right text-2xl'
+            }),
+            React.createElement('div', {
+              className: 'text-center'
+            },
+              React.createElement('p', {
+                className: 'text-3xl font-bold text-green-400'
+              }, data.targetScore + '+'),
+              React.createElement('p', {
+                className: 'text-xs text-indigo-100'
+              }, 'Target')
+            )
+          )
+        )
+      )
+    ),
+    
+    // Overall Progress
+    React.createElement('div', {
+      className: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-6 border border-blue-500/30'
+    },
+      React.createElement('h3', {
+        className: 'text-lg font-bold mb-4 text-blue-400'
+      }, 'Overall Progress to Goal'),
+      React.createElement('div', {
+        className: 'flex items-center space-x-4'
+      },
+        React.createElement('div', {
+          className: 'flex-1'
+        },
+          React.createElement('div', {
+            className: 'w-full h-4 bg-gray-700 rounded-full overflow-hidden'
+          },
+            React.createElement('div', {
+              className: 'h-full bg-gradient-to-r from-blue-400 to-cyan-500 transition-all duration-1000',
+              style: { width: `${(avgProgress * 100).toFixed(0)}%` }
+            })
+          )
+        ),
+        React.createElement('span', {
+          className: 'text-2xl font-bold text-white'
+        }, `${(avgProgress * 100).toFixed(0)}%`)
+      )
+    ),
+    
+    // Credit Factors
+    React.createElement('div', {
+      className: 'grid md:grid-cols-2 gap-6'
+    },
+      data.factors.map((factor, index) =>
+        React.createElement('div', {
+          key: index,
+          className: 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-6 border border-purple-500/30'
+        },
+          React.createElement('div', {
+            className: 'flex items-center justify-between mb-4'
+          },
+            React.createElement('h4', {
+              className: 'font-bold text-white text-lg'
+            }, factor.name),
+            React.createElement('span', {
+              className: 'px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white'
+            }, factor.weight)
+          ),
+          
+          React.createElement('div', {
+            className: 'space-y-3'
+          },
+            React.createElement('div', {
+              className: 'grid grid-cols-2 gap-3 text-sm'
+            },
+              React.createElement('div', {},
+                React.createElement('p', {
+                  className: 'text-gray-400 mb-1'
+                }, 'Current'),
+                React.createElement('p', {
+                  className: 'text-white font-semibold'
+                }, factor.currentStatus)
+              ),
+              React.createElement('div', {},
+                React.createElement('p', {
+                  className: 'text-gray-400 mb-1'
+                }, 'Target'),
+                React.createElement('p', {
+                  className: 'text-green-400 font-semibold'
+                }, factor.targetStatus)
+              )
+            ),
+            
+            React.createElement('div', {},
+              React.createElement('div', {
+                className: 'flex justify-between text-sm mb-1'
+              },
+                React.createElement('span', {
+                  className: 'text-gray-400'
+                }, 'Progress'),
+                React.createElement('span', {
+                  className: 'text-gray-300'
+                }, `${(factor.progress * 100).toFixed(0)}%`)
+              ),
+              React.createElement('div', {
+                className: 'w-full h-2 bg-gray-700 rounded-full overflow-hidden'
+              },
+                React.createElement('div', {
+                  className: `h-full transition-all duration-1000 ${factor.progress >= 0.7 ? 'bg-gradient-to-r from-green-400 to-emerald-500' : factor.progress >= 0.4 ? 'bg-gradient-to-r from-yellow-400 to-orange-500' : 'bg-gradient-to-r from-red-400 to-rose-500'}`,
+                  style: { width: `${(factor.progress * 100).toFixed(0)}%` }
+                })
+              )
+            ),
+            
+            React.createElement('div', {
+              className: 'pt-3 border-t border-white/10'
+            },
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, `Impact: ${factor.impact}`),
+              React.createElement('p', {
+                className: 'text-xs text-gray-300'
+              }, `✅ ${factor.action}`)
+            )
+          )
+        )
+      )
+    )
+  )
+}
+
 // PTO Balance Component (World-Class)
 const PTOBalanceCard = () => {
   const profile = REAL_PROFILE_DATA
@@ -1077,8 +1947,15 @@ const EliteFinancialHub = () => {
               }, 'Monthly Net Income')
             ),
             React.createElement('div', {
-              className: 'w-16 h-16 rounded-full bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center text-2xl font-bold'
-            }, REAL_PROFILE_DATA.currentCreditScore)
+              className: 'flex flex-col items-center'
+            },
+              React.createElement('div', {
+                className: 'w-16 h-16 rounded-full bg-gradient-to-r from-orange-400 to-yellow-500 flex items-center justify-center text-2xl font-bold mb-1'
+              }, REAL_PROFILE_DATA.currentCreditScore),
+              React.createElement('span', {
+                className: 'text-xs text-gray-400'
+              }, 'Improving')
+            )
           )
         )
       )
@@ -1094,23 +1971,24 @@ const EliteFinancialHub = () => {
         React.createElement('div', {
           className: 'flex space-x-8'
         },
-          ['dashboard', 'paycheck', 'retirement', 'subscriptions', 'cashflow', 'analysis', 'goals'].map(tab =>
+          ['dashboard', 'accounts', 'paycheck', 'retirement', 'subscriptions', 'actions', 'credit', 'goals'].map(tab =>
             React.createElement('button', {
               key: tab,
               onClick: () => setActiveTab(tab),
-              className: `py-4 px-6 text-sm font-medium transition-all duration-300 border-b-2 ${
+              className: `py-4 px-4 text-sm font-medium transition-all duration-300 border-b-2 ${
                 activeTab === tab 
                   ? 'border-purple-400 text-purple-400' 
                   : 'border-transparent text-gray-400 hover:text-white'
               }`
             }, {
               dashboard: 'Dashboard',
+              accounts: '🏦 Accounts',
               paycheck: '💰 Paycheck',
-              retirement: '🏦 401(k)',
-              subscriptions: 'Subscriptions', 
-              cashflow: 'Cash Flow',
-              analysis: 'AI Analysis',
-              goals: 'Goals'
+              retirement: '📈 401(k)',
+              subscriptions: '💳 Subscriptions', 
+              actions: '✅ Actions',
+              credit: '📊 Credit',
+              goals: '🎯 Goals'
             }[tab])
           )
         )
@@ -1215,6 +2093,65 @@ const EliteFinancialHub = () => {
           React.createElement(PTOBalanceCard, {})
         ),
         
+        // Bank Accounts Summary
+        React.createElement('div', {
+          className: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-6 border border-blue-500/30'
+        },
+          React.createElement('div', {
+            className: 'flex items-center justify-between mb-4'
+          },
+            React.createElement('h3', {
+              className: 'text-xl font-bold text-blue-400'
+            }, '🏦 Bank Accounts'),
+            React.createElement('button', {
+              onClick: () => setActiveTab('accounts'),
+              className: 'text-sm bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 px-4 py-2 rounded-lg transition-colors'
+            }, 'View Details →')
+          ),
+          React.createElement('div', {
+            className: 'grid grid-cols-2 md:grid-cols-4 gap-4'
+          },
+            React.createElement('div', {},
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, 'Wells Fargo'),
+              React.createElement('p', {
+                className: 'text-xl font-bold text-red-400'
+              }, formatCurrency(REAL_PROFILE_DATA.wellsFargoBalance)),
+              React.createElement('p', {
+                className: 'text-xs text-gray-500'
+              }, 'CRITICAL')
+            ),
+            React.createElement('div', {},
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, 'Bank of America'),
+              React.createElement('p', {
+                className: 'text-xl font-bold text-orange-400'
+              }, formatCurrency(REAL_PROFILE_DATA.boaBalance)),
+              React.createElement('p', {
+                className: 'text-xs text-gray-500'
+              }, 'LOW')
+            ),
+            React.createElement('div', {},
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, 'Total Liquid'),
+              React.createElement('p', {
+                className: 'text-xl font-bold text-white'
+              }, formatCurrency(REAL_PROFILE_DATA.totalLiquid))
+            ),
+            React.createElement('div', {},
+              React.createElement('p', {
+                className: 'text-sm text-gray-400 mb-1'
+              }, 'Net Worth'),
+              React.createElement('p', {
+                className: 'text-xl font-bold text-green-400'
+              }, formatCurrency(REAL_PROFILE_DATA.currentNetWorth))
+            )
+          )
+        ),
+        
         // 401(k) Highlight
         React.createElement('div', {
           className: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-6 border border-green-500/30'
@@ -1307,6 +2244,9 @@ const EliteFinancialHub = () => {
           )
         )
       ),
+      
+      // Bank Accounts Tab
+      activeTab === 'accounts' && React.createElement(BankAccountsDashboard, {}),
       
       // Paycheck Tab
       activeTab === 'paycheck' && React.createElement(PaycheckBreakdown, {}),
@@ -1634,6 +2574,12 @@ const EliteFinancialHub = () => {
           )
         )
       ),
+
+      // Action Items Tab
+      activeTab === 'actions' && React.createElement(ActionItemsDashboard, {}),
+      
+      // Credit Optimization Tab
+      activeTab === 'credit' && React.createElement(CreditOptimizationDashboard, {}),
 
       // Goals Tab  
       activeTab === 'goals' && React.createElement('div', {

@@ -1,0 +1,1318 @@
+{
+  "Dashboard_Data": [
+    {
+      "MrSixPack Financial Dashboard": "Financial Metric",
+      "__EMPTY": "Current Value",
+      "__EMPTY_1": "Target Value",
+      "__EMPTY_2": "Progress %",
+      "__EMPTY_3": "Status"
+    },
+    {
+      "MrSixPack Financial Dashboard": "Pay Period Income",
+      "__EMPTY": 3151.34,
+      "__EMPTY_1": 3500,
+      "__EMPTY_2": 0,
+      "__EMPTY_3": "On Track"
+    },
+    {
+      "MrSixPack Financial Dashboard": "YTD Earnings",
+      "__EMPTY": 64995.38,
+      "__EMPTY_1": 75000,
+      "__EMPTY_2": 0,
+      "__EMPTY_3": "Ahead of Schedule"
+    },
+    {
+      "MrSixPack Financial Dashboard": "401k Balance",
+      "__EMPTY": 5126.14,
+      "__EMPTY_1": 10000,
+      "__EMPTY_2": 0,
+      "__EMPTY_3": "Building"
+    },
+    {
+      "MrSixPack Financial Dashboard": "PTO Hours Available",
+      "__EMPTY": 19,
+      "__EMPTY_1": 40,
+      "__EMPTY_2": 0,
+      "__EMPTY_3": "Need More Time"
+    },
+    {
+      "MrSixPack Financial Dashboard": "Wells Fargo Balance",
+      "__EMPTY": 180.8,
+      "__EMPTY_1": 1000,
+      "__EMPTY_2": 0,
+      "__EMPTY_3": "Critical"
+    },
+    {
+      "MrSixPack Financial Dashboard": "BOA Balance",
+      "__EMPTY": 324.32,
+      "__EMPTY_1": 1000,
+      "__EMPTY_2": 0,
+      "__EMPTY_3": "Low"
+    },
+    {
+      "MrSixPack Financial Dashboard": "Credit Score",
+      "__EMPTY": 640,
+      "__EMPTY_1": 700,
+      "__EMPTY_2": 0,
+      "__EMPTY_3": "Improving"
+    },
+    {
+      "MrSixPack Financial Dashboard": "Monthly Subscriptions",
+      "__EMPTY": 89.98,
+      "__EMPTY_1": 50,
+      "__EMPTY_2": 0,
+      "__EMPTY_3": "Over Budget"
+    },
+    {
+      "MrSixPack Financial Dashboard": "Net Worth (Estimated)",
+      "__EMPTY": 5631.26,
+      "__EMPTY_1": 15000,
+      "__EMPTY_2": 0,
+      "__EMPTY_3": "Growing"
+    },
+    {
+      "MrSixPack Financial Dashboard": "Key Performance Indicators",
+      "__EMPTY": "Quick Financial Health Check",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": ""
+    },
+    {
+      "MrSixPack Financial Dashboard": "Monthly Cash Flow",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Net monthly income after subscriptions",
+      "__EMPTY_2": "",
+      "__EMPTY_3": ""
+    },
+    {
+      "MrSixPack Financial Dashboard": "Emergency Fund Ratio",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Months of expenses covered",
+      "__EMPTY_2": "",
+      "__EMPTY_3": ""
+    },
+    {
+      "MrSixPack Financial Dashboard": "Savings Rate",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Retirement savings as % of monthly income",
+      "__EMPTY_2": "",
+      "__EMPTY_3": ""
+    },
+    {
+      "MrSixPack Financial Dashboard": "Debt-to-Income",
+      "__EMPTY": "0%",
+      "__EMPTY_1": "No reported debt (Good!)",
+      "__EMPTY_2": "",
+      "__EMPTY_3": ""
+    }
+  ],
+  "Income_Sources": [
+    {
+      "MrSixPack Income Sources & Projections": "Income Source",
+      "__EMPTY": "Amount",
+      "__EMPTY_1": "Frequency",
+      "__EMPTY_2": "Monthly Equivalent",
+      "__EMPTY_3": "Annual Projection",
+      "__EMPTY_4": "Notes"
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Primary Job (Gross)",
+      "__EMPTY": 3151.34,
+      "__EMPTY_1": "Bi-Weekly",
+      "__EMPTY_2": 0,
+      "__EMPTY_3": 0,
+      "__EMPTY_4": "Current pay period from paystub"
+    },
+    {
+      "MrSixPack Income Sources & Projections": "401k Contribution",
+      "__EMPTY": 5126.14,
+      "__EMPTY_1": "YTD Total",
+      "__EMPTY_2": 0,
+      "__EMPTY_3": 0,
+      "__EMPTY_4": "Retirement savings (growing)"
+    },
+    {
+      "MrSixPack Income Sources & Projections": "PTO Cash Value",
+      "__EMPTY": 475,
+      "__EMPTY_1": "Available",
+      "__EMPTY_2": 0,
+      "__EMPTY_3": 0,
+      "__EMPTY_4": "19 hours * ~$25/hour estimated"
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Overtime (Potential)",
+      "__EMPTY": 200,
+      "__EMPTY_1": "Monthly",
+      "__EMPTY_2": 0,
+      "__EMPTY_3": 0,
+      "__EMPTY_4": "Based on availability"
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Side Income (Future)",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Variable",
+      "__EMPTY_2": 0,
+      "__EMPTY_3": 0,
+      "__EMPTY_4": "Placeholder for additional income"
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Year-to-Date Summary",
+      "__EMPTY": "Actual Performance vs Projections",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "YTD Gross Earnings",
+      "__EMPTY": 64995.38,
+      "__EMPTY_1": "Actual from paystub",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "YTD Expected (Linear)",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Pro-rated projection",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "YTD Performance",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Actual vs Expected",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Remaining Year Projection",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Expected through year end",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Full Year Estimate",
+      "__EMPTY": 0,
+      "__EMPTY_1": "YTD Actual + Remaining projection",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Monthly Income Breakdown",
+      "__EMPTY": "Regular Monthly Income Analysis",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Gross Monthly (Estimated)",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Based on bi-weekly pay",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Net Monthly (Estimated)",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Assuming ~25% total deductions",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "401k Monthly Contribution",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Current retirement savings rate",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Available Monthly Income",
+      "__EMPTY": 0,
+      "__EMPTY_1": "After retirement contributions",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Income Sources & Projections": "Monthly Savings Goal",
+      "__EMPTY": 0,
+      "__EMPTY_1": "20% of available income recommended",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    }
+  ],
+  "Subscriptions": [
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Service/Subscription",
+      "__EMPTY": "Monthly Cost",
+      "__EMPTY_1": "Annual Cost",
+      "__EMPTY_2": "Category",
+      "__EMPTY_3": "Priority Level",
+      "__EMPTY_4": "Savings Impact",
+      "__EMPTY_5": "Notes/Action"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Netflix",
+      "__EMPTY": 15.49,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Entertainment",
+      "__EMPTY_3": "Medium",
+      "__EMPTY_4": "Keep",
+      "__EMPTY_5": "Standard plan, good value"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Spotify Premium",
+      "__EMPTY": 10.99,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Entertainment",
+      "__EMPTY_3": "High",
+      "__EMPTY_4": "Keep",
+      "__EMPTY_5": "Daily use, essential"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Adobe Creative Suite",
+      "__EMPTY": 22.99,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Professional",
+      "__EMPTY_3": "High",
+      "__EMPTY_4": "Keep",
+      "__EMPTY_5": "Work/side projects"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Amazon Prime",
+      "__EMPTY": 14.98,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Shopping/Entertainment",
+      "__EMPTY_3": "Medium",
+      "__EMPTY_4": "Review",
+      "__EMPTY_5": "Annual might be cheaper"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Disney+",
+      "__EMPTY": 7.99,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Entertainment",
+      "__EMPTY_3": "Low",
+      "__EMPTY_4": "Cancel?",
+      "__EMPTY_5": "Limited use lately"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Hulu",
+      "__EMPTY": 7.99,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Entertainment",
+      "__EMPTY_3": "Low",
+      "__EMPTY_4": "Cancel?",
+      "__EMPTY_5": "Overlaps with Netflix"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Apple iCloud",
+      "__EMPTY": 2.99,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Storage",
+      "__EMPTY_3": "Medium",
+      "__EMPTY_4": "Keep",
+      "__EMPTY_5": "Photo backup essential"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Gym Membership",
+      "__EMPTY": 24.99,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Health/Fitness",
+      "__EMPTY_3": "High",
+      "__EMPTY_4": "Keep",
+      "__EMPTY_5": "Health investment"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "YouTube Premium",
+      "__EMPTY": 11.99,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Entertainment",
+      "__EMPTY_3": "Medium",
+      "__EMPTY_4": "Review",
+      "__EMPTY_5": "Ad-free convenience"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Microsoft 365",
+      "__EMPTY": 6.99,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "Productivity",
+      "__EMPTY_3": "High",
+      "__EMPTY_4": "Keep",
+      "__EMPTY_5": "Work documents"
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Subscription Summary",
+      "__EMPTY": "Cost Analysis & Optimization Opportunities",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Total Monthly Cost",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Current total spending",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Total Annual Cost",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Yearly subscription expense",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "% of Monthly Income",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Subscriptions as % of income",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "High Priority Items",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Essential subscriptions to keep",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Potential Cancellations",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Services marked for cancellation",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Potential Monthly Savings",
+      "__EMPTY": 31.96,
+      "__EMPTY_1": "If canceling Disney+ + Hulu + reviewing others",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Optimization Recommendations",
+      "__EMPTY": "Action Plan for Subscription Management",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Quick Wins",
+      "__EMPTY": "Cancel Disney+ & Hulu",
+      "__EMPTY_1": "Save $15.98/month ($191.76/year)",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Review Items",
+      "__EMPTY": "Switch Amazon to Annual",
+      "__EMPTY_1": "Save ~$30/year with annual plan",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Monitor Usage",
+      "__EMPTY": "Track YouTube Premium usage",
+      "__EMPTY_1": "Cancel if not using regularly",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Bundle Opportunity",
+      "__EMPTY": "Look for streaming bundles",
+      "__EMPTY_1": "Potential additional savings",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Subscription Analysis & Optimization": "Target Goal",
+      "__EMPTY": "Reduce to $50/month total",
+      "__EMPTY_1": "Would save $39.98/month",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    }
+  ],
+  "Accounts": [
+    {
+      "MrSixPack Account Balances & Tracking": "Account Name",
+      "__EMPTY": "Institution",
+      "__EMPTY_1": "Account Type",
+      "__EMPTY_2": "Current Balance",
+      "__EMPTY_3": "Target Balance",
+      "__EMPTY_4": "Monthly Goal",
+      "__EMPTY_5": "Notes/Strategy"
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Primary Checking",
+      "__EMPTY": "Wells Fargo",
+      "__EMPTY_1": "Checking",
+      "__EMPTY_2": 180.8,
+      "__EMPTY_3": 1000,
+      "__EMPTY_4": 200,
+      "__EMPTY_5": "Emergency fund - PRIORITY"
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Secondary Checking",
+      "__EMPTY": "Bank of America",
+      "__EMPTY_1": "Checking",
+      "__EMPTY_2": 324.32,
+      "__EMPTY_3": 1000,
+      "__EMPTY_4": 150,
+      "__EMPTY_5": "Bill payments account"
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Emergency Fund",
+      "__EMPTY": "High-Yield Savings",
+      "__EMPTY_1": "Savings",
+      "__EMPTY_2": 0,
+      "__EMPTY_3": 5000,
+      "__EMPTY_4": 300,
+      "__EMPTY_5": "Target: 3 months expenses"
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "401k Retirement",
+      "__EMPTY": "Employer Plan",
+      "__EMPTY_1": "Retirement",
+      "__EMPTY_2": 5126.14,
+      "__EMPTY_3": 25000,
+      "__EMPTY_4": 427.18,
+      "__EMPTY_5": "Auto-contribution active"
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Investment Account",
+      "__EMPTY": "Brokerage",
+      "__EMPTY_1": "Investment",
+      "__EMPTY_2": 0,
+      "__EMPTY_3": 2000,
+      "__EMPTY_4": 100,
+      "__EMPTY_5": "Long-term growth"
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Vacation Fund",
+      "__EMPTY": "Savings",
+      "__EMPTY_1": "Savings",
+      "__EMPTY_2": 0,
+      "__EMPTY_3": 1500,
+      "__EMPTY_4": 50,
+      "__EMPTY_5": "Future travel goals"
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Account Summary",
+      "__EMPTY": "Total Balances & Progress Analysis",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Total Liquid Assets",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Cash available (checking + savings)",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Total Retirement",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Long-term retirement savings",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Total Investments",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Growth investments",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Grand Total Net Worth",
+      "__EMPTY": 0,
+      "__EMPTY_1": "All account balances combined",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Target Net Worth",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Goal for all accounts",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Progress to Goal",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Overall progress percentage",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Monthly Contribution Goal",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Total monthly savings target",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Monthly Tracking Template",
+      "__EMPTY": "Track Progress Month by Month",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Month",
+      "__EMPTY": "Primary Checkin",
+      "__EMPTY_1": "Secondary Check",
+      "__EMPTY_2": "Emergency Fund",
+      "__EMPTY_3": "401k Retirement",
+      "__EMPTY_4": "Investment Acco",
+      "__EMPTY_5": "Vacation Fund"
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "January",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "February",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "March",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "April",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "May",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "June",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Account Improvement Strategies",
+      "__EMPTY": "Actionable Steps to Reach Targets",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Wells Fargo Emergency",
+      "__EMPTY": "Immediate: Add $200/month",
+      "__EMPTY_1": "Reach $1000 in 5 months",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "BOA Bill Account",
+      "__EMPTY": "Maintain: Keep above $500",
+      "__EMPTY_1": "Avoid overdraft fees",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "High-Yield Savings",
+      "__EMPTY": "Start: Open account & automate",
+      "__EMPTY_1": "Build 3-month emergency fund",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "401k Optimization",
+      "__EMPTY": "Review: Increase % if possible",
+      "__EMPTY_1": "Maximize employer match",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Investment Account",
+      "__EMPTY": "Begin: Start with $100/month",
+      "__EMPTY_1": "Dollar-cost averaging strategy",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Account Balances & Tracking": "Automation Setup",
+      "__EMPTY": "Implement: Auto-transfers",
+      "__EMPTY_1": "Set it and forget it approach",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    }
+  ],
+  "Credit_Optimization": [
+    {
+      "MrSixPack Credit Score Optimization Plan": "Current Credit Score:",
+      "__EMPTY": 640,
+      "__EMPTY_1": "Target Score:",
+      "__EMPTY_2": "700+",
+      "__EMPTY_3": "Improvement Needed:",
+      "__EMPTY_4": "+60 points"
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Credit Factor",
+      "__EMPTY": "Current Status",
+      "__EMPTY_1": "Target Status",
+      "__EMPTY_2": "Impact Level",
+      "__EMPTY_3": "Progress %",
+      "__EMPTY_4": "Action Required"
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Payment History (35%)",
+      "__EMPTY": "Good",
+      "__EMPTY_1": "Excellent",
+      "__EMPTY_2": "High",
+      "__EMPTY_3": 0.85,
+      "__EMPTY_4": "Continue perfect payment streak"
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Credit Utilization (30%)",
+      "__EMPTY": "High (>30%)",
+      "__EMPTY_1": "Low (<10%)",
+      "__EMPTY_2": "Very High",
+      "__EMPTY_3": 0.2,
+      "__EMPTY_4": "Pay down balances, increase limits"
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Length of History (15%)",
+      "__EMPTY": "Short (2-3 years)",
+      "__EMPTY_1": "Long (5+ years)",
+      "__EMPTY_2": "Medium",
+      "__EMPTY_3": 0.6,
+      "__EMPTY_4": "Keep old accounts open, be patient"
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Credit Mix (10%)",
+      "__EMPTY": "Limited",
+      "__EMPTY_1": "Diverse",
+      "__EMPTY_2": "Low",
+      "__EMPTY_3": 0.4,
+      "__EMPTY_4": "Add different types of credit"
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "New Credit (10%)",
+      "__EMPTY": "Recent inquiries",
+      "__EMPTY_1": "Stable",
+      "__EMPTY_2": "Medium",
+      "__EMPTY_3": 0.7,
+      "__EMPTY_4": "Avoid new credit applications"
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Total Accounts",
+      "__EMPTY": "3-4 accounts",
+      "__EMPTY_1": "5-8 accounts",
+      "__EMPTY_2": "Low",
+      "__EMPTY_3": 0.5,
+      "__EMPTY_4": "Gradually add accounts over time"
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Debt-to-Income",
+      "__EMPTY": "0% (Great!)",
+      "__EMPTY_1": "Keep at 0%",
+      "__EMPTY_2": "High",
+      "__EMPTY_3": 1,
+      "__EMPTY_4": "Maintain no debt - huge advantage!"
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "90-Day Credit Improvement Plan",
+      "__EMPTY": "Priority Actions for Maximum Score Boost",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Timeframe",
+      "__EMPTY": "Action Item",
+      "__EMPTY_1": "Priority",
+      "__EMPTY_2": "Details",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Week 1-2",
+      "__EMPTY": "Calculate exact credit utilization",
+      "__EMPTY_1": "High Priority",
+      "__EMPTY_2": "Get all current balances and limits",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Week 3-4",
+      "__EMPTY": "Pay down high-utilization cards",
+      "__EMPTY_1": "Critical",
+      "__EMPTY_2": "Target cards over 30% utilization first",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Week 5-6",
+      "__EMPTY": "Request credit limit increases",
+      "__EMPTY_1": "High Priority",
+      "__EMPTY_2": "Call existing creditors, don't apply new",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Week 7-8",
+      "__EMPTY": "Set up automatic payments",
+      "__EMPTY_1": "Critical",
+      "__EMPTY_2": "Ensure perfect payment history continues",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Week 9-10",
+      "__EMPTY": "Monitor credit reports",
+      "__EMPTY_1": "Medium Priority",
+      "__EMPTY_2": "Check for errors, dispute if needed",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Week 11-12",
+      "__EMPTY": "Reassess and plan next steps",
+      "__EMPTY_1": "Medium Priority",
+      "__EMPTY_2": "Evaluate progress, adjust strategy",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Score Improvement Projections",
+      "__EMPTY": "Expected Progress Timeline",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Milestone",
+      "__EMPTY": "Projected Score",
+      "__EMPTY_1": "Contributing Factors",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "Current Score",
+      "__EMPTY": 640,
+      "__EMPTY_1": "Starting point",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "30 Days (Payment history)",
+      "__EMPTY": 650,
+      "__EMPTY_1": "+10 points from continued perfect payments",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "60 Days (Utilization fix)",
+      "__EMPTY": 680,
+      "__EMPTY_1": "+30 points from reduced utilization",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "90 Days (Limit increases)",
+      "__EMPTY": 700,
+      "__EMPTY_1": "+20 points from increased available credit",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "6 Months (Time factor)",
+      "__EMPTY": 720,
+      "__EMPTY_1": "+20 points from longer history",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    },
+    {
+      "MrSixPack Credit Score Optimization Plan": "12 Months (Full optimization)",
+      "__EMPTY": 740,
+      "__EMPTY_1": "+20 points from mature account management",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": ""
+    }
+  ],
+  "Action_Items": [
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "✓",
+      "__EMPTY": "Action Item",
+      "__EMPTY_1": "Priority",
+      "__EMPTY_2": "Monthly Savings",
+      "__EMPTY_3": "Time Needed",
+      "__EMPTY_4": "Deadline",
+      "__EMPTY_5": "Notes/Resources"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Cancel Disney+ subscription",
+      "__EMPTY_1": "High",
+      "__EMPTY_2": 7.99,
+      "__EMPTY_3": "5 minutes",
+      "__EMPTY_4": "1 week",
+      "__EMPTY_5": "Save $95.88/year, barely used"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Cancel Hulu subscription",
+      "__EMPTY_1": "High",
+      "__EMPTY_2": 7.99,
+      "__EMPTY_3": "5 minutes",
+      "__EMPTY_4": "1 week",
+      "__EMPTY_5": "Save $95.88/year, overlaps Netflix"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Build Wells Fargo emergency fund",
+      "__EMPTY_1": "High",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "1 hour setup",
+      "__EMPTY_4": "30 days",
+      "__EMPTY_5": "Add $200/month to reach $1000"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Set up automatic transfers",
+      "__EMPTY_1": "High",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "30 minutes",
+      "__EMPTY_4": "2 weeks",
+      "__EMPTY_5": "Automate savings to avoid spending"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Review credit card utilization",
+      "__EMPTY_1": "High",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "1 hour",
+      "__EMPTY_4": "1 week",
+      "__EMPTY_5": "Critical for credit score improvement"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Switch Amazon Prime to annual",
+      "__EMPTY_1": "Medium",
+      "__EMPTY_2": 30,
+      "__EMPTY_3": "10 minutes",
+      "__EMPTY_4": "30 days",
+      "__EMPTY_5": "Annual plan saves ~$30/year"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Open high-yield savings account",
+      "__EMPTY_1": "Medium",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "2 hours",
+      "__EMPTY_4": "2 weeks",
+      "__EMPTY_5": "Earn 4-5% vs 0.01% current"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Request credit limit increases",
+      "__EMPTY_1": "Medium",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "30 minutes",
+      "__EMPTY_4": "1 week",
+      "__EMPTY_5": "Improves credit utilization ratio"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Consolidate checking accounts",
+      "__EMPTY_1": "Medium",
+      "__EMPTY_2": 15,
+      "__EMPTY_3": "2 hours",
+      "__EMPTY_4": "60 days",
+      "__EMPTY_5": "Eliminate fees, simplify tracking"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Review YouTube Premium usage",
+      "__EMPTY_1": "Medium",
+      "__EMPTY_2": 11.99,
+      "__EMPTY_3": "5 minutes",
+      "__EMPTY_4": "2 weeks",
+      "__EMPTY_5": "Cancel if not using regularly"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Research investment account options",
+      "__EMPTY_1": "Low",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "3 hours",
+      "__EMPTY_4": "90 days",
+      "__EMPTY_5": "Start with $100/month investing"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Optimize 401k contribution %",
+      "__EMPTY_1": "Low",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "1 hour",
+      "__EMPTY_4": "60 days",
+      "__EMPTY_5": "Maximize employer match first"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Set up vacation savings fund",
+      "__EMPTY_1": "Low",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "30 minutes",
+      "__EMPTY_4": "30 days",
+      "__EMPTY_5": "Automate $50/month for travel"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Create monthly budget template",
+      "__EMPTY_1": "Low",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "2 hours",
+      "__EMPTY_4": "2 weeks",
+      "__EMPTY_5": "Track spending patterns"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Research cashback credit cards",
+      "__EMPTY_1": "Low",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "1 hour",
+      "__EMPTY_4": "6 months",
+      "__EMPTY_5": "Only after credit score improves"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Monthly account balance review",
+      "__EMPTY_1": "Medium",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "15 minutes",
+      "__EMPTY_4": "Monthly",
+      "__EMPTY_5": "Track progress, catch issues early"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Quarterly credit report check",
+      "__EMPTY_1": "Medium",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "30 minutes",
+      "__EMPTY_4": "Quarterly",
+      "__EMPTY_5": "Monitor score improvements"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Annual insurance review",
+      "__EMPTY_1": "Low",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "2 hours",
+      "__EMPTY_4": "Annually",
+      "__EMPTY_5": "Optimize rates and coverage"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Tax optimization planning",
+      "__EMPTY_1": "Low",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "3 hours",
+      "__EMPTY_4": "Annually",
+      "__EMPTY_5": "Maximize deductions and credits"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "☐",
+      "__EMPTY": "Financial goal reassessment",
+      "__EMPTY_1": "Low",
+      "__EMPTY_2": "Process",
+      "__EMPTY_3": "1 hour",
+      "__EMPTY_4": "Annually",
+      "__EMPTY_5": "Adjust targets based on progress"
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Action Summary",
+      "__EMPTY": "Impact Analysis & Priority Breakdown",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Total Potential Monthly Savings",
+      "__EMPTY": 72.97,
+      "__EMPTY_1": "$875.64 annually",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "High Priority Actions",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Complete these first for maximum impact",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Quick Wins (<30 minutes)",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Easy actions with immediate savings",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Process Improvements",
+      "__EMPTY": 0,
+      "__EMPTY_1": "Long-term financial health items",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Completion Target",
+      "__EMPTY": "80%",
+      "__EMPTY_1": "Complete 80% within 90 days",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Weekly Progress Tracker",
+      "__EMPTY": "Mark Your Progress Each Week",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week",
+      "__EMPTY": "Actions Completed",
+      "__EMPTY_1": "Cumulative Savings",
+      "__EMPTY_2": "Notes",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 1",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 2",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 3",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 4",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 5",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 6",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 7",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 8",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 9",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 10",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 11",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    },
+    {
+      "MrSixPack Financial Action Items & Savings Tracker": "Week 12",
+      "__EMPTY": "",
+      "__EMPTY_1": "",
+      "__EMPTY_2": "",
+      "__EMPTY_3": "",
+      "__EMPTY_4": "",
+      "__EMPTY_5": ""
+    }
+  ]
+}
