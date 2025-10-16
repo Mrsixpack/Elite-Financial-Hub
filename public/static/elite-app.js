@@ -311,7 +311,7 @@ const CREDIT_OPTIMIZATION_DATA = {
       action: 'Avoid new credit applications'
     }
   ]
-}]
+}
 
 // MrSixPack's ACTUAL financial profile from OCTOBER 2025 real payroll data
 const REAL_PROFILE_DATA = {
