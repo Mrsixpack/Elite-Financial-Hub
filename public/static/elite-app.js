@@ -311,7 +311,7 @@ const CREDIT_OPTIMIZATION_DATA = {
       action: 'Avoid new credit applications'
     }
   ]
-}]
+}
 
 // MrSixPack's ACTUAL financial profile from OCTOBER 2025 real payroll data
 const REAL_PROFILE_DATA = {
@@ -611,6 +611,133 @@ const SubscriptionCard = ({ subscription, index }) => {
     React.createElement('div', {
       className: `absolute inset-0 bg-gradient-to-r from-white/0 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500`
     })
+  )
+}
+
+// 🌟 NEW: Editable Subscription Card (14/10 VERSION!)
+const EditableSubscriptionCard = ({ subscription, index, editingId, editingField, setEditingId, setEditingField, onUpdate }) => {
+  const [isHovered, setIsHovered] = useState(false)
+  const [tempValue, setTempValue] = useState('')
+  const colors = getCategoryColor(subscription.category)
+  
+  const isEditing = editingId === subscription.id
+  
+  const startEdit = (field, currentValue) => {
+    setEditingId(subscription.id)
+    setEditingField(field)
+    setTempValue(currentValue)
+  }
+  
+  const saveEdit = () => {
+    if (tempValue !== '') {
+      onUpdate(editingField, tempValue)
+    }
+    setEditingId(null)
+    setEditingField(null)
+  }
+  
+  const cancelEdit = () => {
+    setEditingId(null)
+    setEditingField(null)
+    setTempValue('')
+  }
+  
+  return React.createElement('div', {
+    className: `glass-card hover-lift rounded-2xl p-6 transition-all duration-300 ${isEditing ? 'ring-2 ring-primary ring-offset-2' : ''}`,
+    style: {
+      animationDelay: `${index * 50}ms`
+    },
+    onMouseEnter: () => setIsHovered(true),
+    onMouseLeave: () => setIsHovered(false)
+  },
+    // Header with icon and category
+    React.createElement('div', {
+      className: 'flex items-center justify-between mb-4'
+    },
+      React.createElement('span', {
+        className: 'text-3xl animate-bounce-subtle'
+      }, subscription.icon),
+      React.createElement('div', {
+        className: 'flex gap-2'
+      },
+        React.createElement('span', {
+          className: `px-3 py-1 rounded-full text-xs font-semibold ${subscription.priority === 'High' ? 'bg-red-500/20 text-red-600' : subscription.priority === 'Medium' ? 'bg-yellow-500/20 text-yellow-600' : 'bg-green-500/20 text-green-600'}`
+        }, subscription.priority),
+        subscription.action && React.createElement('span', {
+          className: `px-3 py-1 rounded-full text-xs font-semibold ${subscription.action.includes('Cancel') ? 'bg-red-500/20 text-red-600' : subscription.action === 'Keep' ? 'bg-green-500/20 text-green-600' : 'bg-yellow-500/20 text-yellow-600'}`
+        }, subscription.action)
+      )
+    ),
+    
+    // Service Name
+    React.createElement('h3', {
+      className: 'font-bold text-lg text-gray-800 dark:text-white mb-2'
+    }, subscription.serviceName),
+    
+    // Editable Monthly Cost
+    React.createElement('div', {
+      className: 'mb-3'
+    },
+      isEditing && editingField === 'monthlyCost'
+        ? React.createElement('div', {
+            className: 'flex gap-2'
+          },
+            React.createElement('input', {
+              type: 'number',
+              step: '0.01',
+              value: tempValue,
+              onChange: (e) => setTempValue(e.target.value),
+              onKeyDown: (e) => e.key === 'Enter' ? saveEdit() : e.key === 'Escape' ? cancelEdit() : null,
+              className: 'editing w-full px-3 py-2 rounded-lg border-2 border-primary text-gray-900 focus:outline-none',
+              autoFocus: true
+            }),
+            React.createElement('button', {
+              onClick: saveEdit,
+              className: 'px-3 py-1 bg-primary text-white rounded-lg hover:bg-primary/80 transition'
+            }, '✓'),
+            React.createElement('button', {
+              onClick: cancelEdit,
+              className: 'px-3 py-1 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition'
+            }, '✗')
+          )
+        : React.createElement('div', {
+            className: 'editable inline-block',
+            onClick: () => startEdit('monthlyCost', subscription.monthlyCost)
+          },
+            React.createElement('p', {
+              className: 'text-2xl font-bold text-primary'
+            }, formatCurrency(subscription.monthlyCost), '/mo'),
+            isHovered && React.createElement('span', {
+              className: 'ml-2 text-xs text-gray-500'
+            }, '✏️ Click to edit')
+          )
+    ),
+    
+    // Next Renewal Date
+    React.createElement('p', {
+      className: 'text-sm text-gray-600 dark:text-gray-400 mb-2'
+    }, `Next: ${subscription.nextRenewal}`),
+    
+    // Notes/Recommendations
+    subscription.notes && React.createElement('div', {
+      className: `mt-3 pt-3 border-t border-gray-200 dark:border-gray-700`
+    },
+      React.createElement('p', {
+        className: `text-xs ${subscription.notes.includes('SAVE') ? 'text-red-600 font-bold' : 'text-gray-600 dark:text-gray-400'}`
+      }, subscription.notes)
+    ),
+    
+    // Annual Cost
+    React.createElement('div', {
+      className: 'mt-3 flex justify-between items-center text-sm'
+    },
+      React.createElement('span', {
+        className: 'text-gray-600 dark:text-gray-400'
+      }, 'Annual'),
+      React.createElement('span', {
+        className: 'font-bold text-gray-800 dark:text-white'
+      }, formatCurrency(subscription.monthlyCost * 12))
+    )
   )
 }
 
@@ -1414,23 +1541,14 @@ const BankAccountsDashboard = () => {
 }
 
 // Action Items Dashboard Component (World-Class)
-const ActionItemsDashboard = () => {
-  const [completedItems, setCompletedItems] = useState([])
+const ActionItemsDashboard = ({ actionItems = ACTION_ITEMS_DATA, onToggle }) => {
+  const totalMonthlySavings = actionItems.reduce((sum, item) => sum + (item.monthlySavings || 0), 0)
+  const totalAnnualSavings = actionItems.reduce((sum, item) => sum + (item.annualSavings || 0), 0)
+  const completedCount = actionItems.filter(item => item.completed).length
   
-  const toggleItem = (id) => {
-    if (completedItems.includes(id)) {
-      setCompletedItems(completedItems.filter(itemId => itemId !== id))
-    } else {
-      setCompletedItems([...completedItems, id])
-    }
-  }
-  
-  const totalMonthlySavings = ACTION_ITEMS_DATA.reduce((sum, item) => sum + (item.monthlySavings || 0), 0)
-  const totalAnnualSavings = ACTION_ITEMS_DATA.reduce((sum, item) => sum + (item.annualSavings || 0), 0)
-  
-  const highPriorityItems = ACTION_ITEMS_DATA.filter(item => item.priority === 'High')
-  const mediumPriorityItems = ACTION_ITEMS_DATA.filter(item => item.priority === 'Medium')
-  const lowPriorityItems = ACTION_ITEMS_DATA.filter(item => item.priority === 'Low')
+  const highPriorityItems = actionItems.filter(item => item.priority === 'High')
+  const mediumPriorityItems = actionItems.filter(item => item.priority === 'Medium')
+  const lowPriorityItems = actionItems.filter(item => item.priority === 'Low')
   
   const getPriorityColor = (priority) => {
     const colors = {
@@ -1525,7 +1643,7 @@ const ActionItemsDashboard = () => {
         }, 'Completed'),
         React.createElement('p', {
           className: 'text-2xl font-bold text-white'
-        }, `${completedItems.length}/${ACTION_ITEMS_DATA.length}`)
+        }, `${completedCount}/${actionItems.length}`)
       )
     ),
     
@@ -1533,7 +1651,7 @@ const ActionItemsDashboard = () => {
     React.createElement('div', {
       className: 'space-y-4'
     },
-      ACTION_ITEMS_DATA.map(item =>
+      actionItems.map(item =>
         React.createElement('div', {
           key: item.id,
           className: `bg-gradient-to-br ${getPriorityColor(item.priority)}/20 rounded-2xl p-6 border ${getPriorityColor(item.priority).replace('from-', 'border-').split(' ')[0]}/30 transition-all duration-300 ${completedItems.includes(item.id) ? 'opacity-50' : ''}`
@@ -1545,10 +1663,10 @@ const ActionItemsDashboard = () => {
               className: 'flex items-start space-x-4 flex-1'
             },
               React.createElement('button', {
-                onClick: () => toggleItem(item.id),
-                className: `w-6 h-6 rounded border-2 flex items-center justify-center transition-colors ${completedItems.includes(item.id) ? 'bg-green-500 border-green-500' : 'border-gray-400 hover:border-green-400'}`
+                onClick: () => onToggle && onToggle(item.id),
+                className: `w-6 h-6 rounded border-2 flex items-center justify-center transition-colors ${item.completed ? 'bg-green-500 border-green-500' : 'border-gray-400 hover:border-green-400'}`
               },
-                completedItems.includes(item.id) && React.createElement('i', {
+                item.completed && React.createElement('i', {
                   className: 'fas fa-check text-white text-xs'
                 })
               ),
@@ -1562,7 +1680,7 @@ const ActionItemsDashboard = () => {
                     className: 'text-2xl'
                   }, getCategoryIcon(item.category)),
                   React.createElement('h3', {
-                    className: `font-bold text-white text-lg ${completedItems.includes(item.id) ? 'line-through' : ''}`
+                    className: `font-bold text-white text-lg ${item.completed ? 'line-through opacity-50' : ''}`
                   }, item.action)
                 ),
                 React.createElement('div', {
@@ -1881,9 +1999,106 @@ const PTOBalanceCard = () => {
 }
 
 // Main App Component
+// Helper Functions for Inline Editing
+const updateSubscription = (subscriptions, setSubscriptions, id, field, value) => {
+  setSubscriptions(subscriptions.map(sub => 
+    sub.id === id ? { ...sub, [field]: parseFloat(value) || value } : sub
+  ))
+}
+
+const toggleActionItem = (actionItems, setActionItems, id) => {
+  setActionItems(actionItems.map(item =>
+    item.id === id ? { ...item, completed: !item.completed } : item
+  ))
+}
+
+const updateBankAccount = (bankAccounts, setBankAccounts, id, field, value) => {
+  setBankAccounts(bankAccounts.map(account =>
+    account.id === id ? { ...account, [field]: parseFloat(value) || value } : account
+  ))
+}
+
+// PWA Install function
+const installPWA = async (deferredPrompt, setShowInstallPrompt) => {
+  if (!deferredPrompt) return
+  
+  deferredPrompt.prompt()
+  const { outcome } = await deferredPrompt.userChoice
+  
+  if (outcome === 'accepted') {
+    console.log('✅ PWA installed!')
+  }
+  
+  setShowInstallPrompt(false)
+}
+
 const EliteFinancialHub = () => {
+  // Core State
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('dashboard')
+  
+  // Dark Mode State
+  const [darkMode, setDarkMode] = useState(true)
+  
+  // Editable Data State (with localStorage persistence)
+  const [subscriptions, setSubscriptions] = useState(() => {
+    const saved = localStorage.getItem('subscriptions')
+    return saved ? JSON.parse(saved) : REAL_SUBSCRIPTION_DATA
+  })
+  
+  const [actionItems, setActionItems] = useState(() => {
+    const saved = localStorage.getItem('actionItems')
+    return saved ? JSON.parse(saved) : ACTION_ITEMS_DATA
+  })
+  
+  const [bankAccounts, setBankAccounts] = useState(() => {
+    const saved = localStorage.getItem('bankAccounts')
+    return saved ? JSON.parse(saved) : BANK_ACCOUNTS_DATA
+  })
+  
+  // Editing State
+  const [editingId, setEditingId] = useState(null)
+  const [editingField, setEditingField] = useState(null)
+  
+  // PWA Install State
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
+  
+  // Save to localStorage whenever data changes
+  useEffect(() => {
+    localStorage.setItem('subscriptions', JSON.stringify(subscriptions))
+  }, [subscriptions])
+  
+  useEffect(() => {
+    localStorage.setItem('actionItems', JSON.stringify(actionItems))
+  }, [actionItems])
+  
+  useEffect(() => {
+    localStorage.setItem('bankAccounts', JSON.stringify(bankAccounts))
+  }, [bankAccounts])
+  
+  // Dark mode persistence
+  useEffect(() => {
+    const saved = localStorage.getItem('darkMode')
+    if (saved !== null) {
+      setDarkMode(JSON.parse(saved))
+    }
+  }, [])
+  
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(darkMode))
+    if (darkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [darkMode])
+  
+  // PWA Install detection
+  useEffect(() => {
+    if (window.showInstallPromotion) {
+      setShowInstallPrompt(true)
+    }
+  }, [])
   
   useEffect(() => {
     // Simulate loading
@@ -1936,6 +2151,28 @@ const EliteFinancialHub = () => {
           React.createElement('div', {
             className: 'flex items-center space-x-6'
           },
+            // Dark Mode Toggle
+            React.createElement('button', {
+              onClick: () => setDarkMode(!darkMode),
+              className: 'p-3 rounded-xl glass-card hover-lift transition-all duration-300',
+              title: darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'
+            },
+              React.createElement('i', {
+                className: `fas ${darkMode ? 'fa-sun' : 'fa-moon'} text-yellow-400 text-xl`
+              })
+            ),
+            
+            // PWA Install Button
+            showInstallPrompt && React.createElement('button', {
+              onClick: () => installPWA(window.deferredPrompt, setShowInstallPrompt),
+              className: 'px-4 py-2 bg-primary text-white rounded-xl font-semibold hover:bg-primary/80 transition-all duration-300 flex items-center gap-2 animate-pulse-slow'
+            },
+              React.createElement('i', {
+                className: 'fas fa-download'
+              }),
+              'Install App'
+            ),
+            
             React.createElement('div', {
               className: 'text-right'
             },
@@ -2279,11 +2516,16 @@ const EliteFinancialHub = () => {
         React.createElement('div', {
           className: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
         },
-          REAL_SUBSCRIPTION_DATA.map((subscription, index) =>
-            React.createElement(SubscriptionCard, {
+          subscriptions.map((subscription, index) =>
+            React.createElement(EditableSubscriptionCard, {
               key: subscription.id,
               subscription,
-              index
+              index,
+              editingId,
+              editingField,
+              setEditingId,
+              setEditingField,
+              onUpdate: (field, value) => updateSubscription(subscriptions, setSubscriptions, subscription.id, field, value)
             })
           )
         )
@@ -2576,7 +2818,10 @@ const EliteFinancialHub = () => {
       ),
 
       // Action Items Tab
-      activeTab === 'actions' && React.createElement(ActionItemsDashboard, {}),
+      activeTab === 'actions' && React.createElement(ActionItemsDashboard, {
+        actionItems,
+        onToggle: (id) => toggleActionItem(actionItems, setActionItems, id)
+      }),
       
       // Credit Optimization Tab
       activeTab === 'credit' && React.createElement(CreditOptimizationDashboard, {}),
